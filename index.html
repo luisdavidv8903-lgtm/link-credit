@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Link Credit | Recursos Financieros & Referidos Verificados</title>
+  <meta name="description" content="Plataforma de referidos financieros verificados. Gana bonos en SoFi, Rakuten, Coinbase, Kraken y más. Operado por DELIVERYLINK LLC, Florida."/>
+  <meta name="keywords" content="referidos financieros, bonos registro, SoFi, Coinbase, Kraken, Kikoff, cashback, tarjetas crédito"/>
+  <meta name="author" content="DELIVERYLINK LLC"/>
+  <meta property="og:title" content="Link Credit | Gana Dinero con Referidos Financieros"/>
+  <meta property="og:description" content="13 referidos verificados con bonos reales. Calculadora de ganancias incluida."/>
+  <meta property="og:url" content="https://link-credit.com"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://link-credit.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <style>
+  /* ═══════════════════════════════════════════════
+     TOKENS — LIGHT MODE (default)
+  ═══════════════════════════════════════════════ */
+  :root {
+    --bg:          #F5F7FF;
+    --bg-card:     #FFFFFF;
+    --bg-card2:    #F0F3FF;
+    --bg-subtle:   #EBF0FF;
+    --border:      #D6DFFF;
+    --border-hover:#A5B4FC;
+    --blue:        #2563EB;
+    --blue-light:  #EFF3FF;
+    --blue-mid:    #BFCBFF;
+    --cyan:        #0EA5E9;
+    --gold:        #D97706;
+    --gold-light:  #FEF3C7;
+    --green:       #059669;
+    --green-light: #D1FAE5;
+    --red:         #DC2626;
+    --red-light:   #FEE2E2;
+    --purple:      #7C3AED;
+    --text:        #0F172A;
+    --text-2:      #334155;
+    --text-muted:  #64748B;
+    --text-faint:  #94A3B8;
+    --shadow-sm:   0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+    --shadow-md:   0 4px 16px rgba(15,23,42,.08), 0 2px 6px rgba(15,23,42,.04);
+    --shadow-lg:   0 12px 40px rgba(15,23,42,.10), 0 4px 12px rgba(15,23,42,.06);
+    --radius:      14px;
+    --radius-sm:   8px;
+    --font:        'Inter', system-ui, sans-serif;
+  }
+
+  /* DARK MODE */
+  [data-theme="dark"] {
+    --bg:          #07111F;
+    --bg-card:     #0D1A2D;
+    --bg-card2:    #112035;
+    --bg-subtle:   #152540;
+    --border:      rgba(99,131,247,0.18);
+    --border-hover:rgba(99,131,247,0.5);
+    --blue-light:  rgba(37,99,235,0.12);
+    --blue-mid:    rgba(37,99,235,0.25);
+    --gold-light:  rgba(217,119,6,0.12);
+    --green-light: rgba(5,150,105,0.12);
+    --red-light:   rgba(220,38,38,0.12);
+    --text:        #E2E8F8;
+    --text-2:      #B8C5DC;
+    --text-muted:  #7A90AE;
+    --text-faint:  #4A607A;
+    --shadow-sm:   0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md:   0 4px 16px rgba(0,0,0,0.35);
+    --shadow-lg:   0 12px 40px rgba(0,0,0,0.4);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: var(--font); font-size: 15px; line-height: 1.6;
+    transition: background .3s, color .3s;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(245,247,255,0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+    transition: background .3s;
+  }
+  [data-theme="dark"] header { background: rgba(7,17,31,0.88); }
+  .header-inner {
+    max-width: 1160px; margin: 0 auto; padding: 0 20px;
+    height: 62px; display: flex; align-items: center; gap: 12px;
+  }
+  .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 900; color: #fff; letter-spacing: -1px;
+  }
+  .logo-name { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: -0.4px; }
+  .logo-name span { color: var(--blue); }
+  .nav-tabs {
+    display: flex; gap: 4px; margin-left: auto;
+  }
+  .nav-tab {
+    background: none; border: none; cursor: pointer;
+    font-family: var(--font); font-size: 13px; font-weight: 600;
+    color: var(--text-muted); padding: 7px 14px; border-radius: 8px;
+    transition: all .2s; display: flex; align-items: center; gap: 5px;
+  }
+  .nav-tab:hover { color: var(--blue); background: var(--blue-light); }
+  .nav-tab.active { color: var(--blue); background: var(--blue-light); }
+  .header-right { display: flex; align-items: center; gap: 8px; margin-left: 8px; }
+  .theme-toggle {
+    width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg-card); cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s;
+  }
+  .theme-toggle:hover { border-color: var(--blue); background: var(--blue-light); }
+  .btn-calc {
+    background: var(--gold); color: #fff; border: none;
+    padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: var(--font); transition: all .2s;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .btn-calc:hover { background: #B45309; transform: translateY(-1px); }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 1160px; margin: 0 auto; padding: 72px 20px 56px;
+    text-align: center;
+  }
+  .hero-pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--blue-light); border: 1px solid var(--blue-mid);
+    color: var(--blue); font-size: 12px; font-weight: 700;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 26px;
+    letter-spacing: 0.3px;
+  }
+  .hero-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); animation: blink 1.8s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+  h1 {
+    font-size: clamp(30px, 5.5vw, 56px); font-weight: 900;
+    line-height: 1.12; letter-spacing: -2px; margin-bottom: 18px;
+    color: var(--text);
+  }
+  h1 em { font-style: normal; color: var(--blue); }
+  h1 strong { font-style: normal; color: var(--gold); }
+  .hero-sub {
+    color: var(--text-muted); font-size: 17px; max-width: 520px;
+    margin: 0 auto 38px; line-height: 1.7; font-weight: 400;
+  }
+  .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--blue); color: #fff; border: none;
+    padding: 13px 28px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700;
+    cursor: pointer; font-family: var(--font); text-decoration: none;
+    transition: all .2s; display: inline-flex; align-items: center; gap: 6px;
+    box-shadow: 0 4px 14px rgba(37,99,235,.35);
+  }
+  .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,.4); }
+  .btn-outline {
+    background: var(--bg-card); color: var(--text-2); border: 1px solid var(--border);
+    padding: 13px 28px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600;
+    cursor: pointer; font-family: var(--font); text-decoration: none;
+    transition: all .2s; display: inline-flex; align-items: center; gap: 6px;
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 48px;
+    margin-top: 56px; flex-wrap: wrap;
+    padding-top: 40px; border-top: 1px solid var(--border);
+  }
+  .stat-num { font-size: 28px; font-weight: 900; color: var(--blue); letter-spacing: -1px; }
+  .stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+
+  /* ── SECTION COMMON ── */
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+  .sec { padding-bottom: 72px; }
+  .sec-head { text-align: center; margin-bottom: 40px; }
+  .sec-eyebrow {
+    font-size: 11px; font-weight: 800; letter-spacing: 2px;
+    color: var(--blue); text-transform: uppercase; margin-bottom: 10px;
+  }
+  h2 { font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; letter-spacing: -0.8px; color: var(--text); }
+  .sec-sub { color: var(--text-muted); font-size: 15px; max-width: 460px; margin: 10px auto 0; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0 20px 64px; }
+
+  /* ── FILTER TABS ── */
+  .filter-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 32px; }
+  .ftab {
+    background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--text-muted); font-size: 13px; font-weight: 600;
+    padding: 7px 18px; border-radius: 20px; cursor: pointer;
+    font-family: var(--font); transition: all .2s;
+    box-shadow: var(--shadow-sm);
+  }
+  .ftab:hover { border-color: var(--blue); color: var(--blue); }
+  .ftab.on { background: var(--blue); color: #fff; border-color: var(--blue); box-shadow: 0 3px 10px rgba(37,99,235,.3); }
+
+  /* ── LINK CARDS ── */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 16px; }
+  .lcard {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px;
+    box-shadow: var(--shadow-sm); transition: all .25s;
+    display: flex; flex-direction: column;
+  }
+  .lcard:hover { border-color: var(--border-hover); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .lcard-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+  .lcard-icon {
+    width: 46px; height: 46px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .lcard-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+  .badge {
+    font-size: 10px; font-weight: 700; padding: 3px 9px;
+    border-radius: 20px; letter-spacing: 0.2px;
+  }
+  .badge-v  { background: var(--green-light); color: var(--green); }
+  .badge-h  { background: var(--red-light);   color: var(--red); }
+  .badge-n  { background: var(--blue-light);  color: var(--blue); }
+  .badge-g  { background: var(--gold-light);  color: var(--gold); }
+  .lcard-name { font-size: 16px; font-weight: 800; margin-bottom: 3px; color: var(--text); }
+  .lcard-cat  { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+  .lcard-desc { font-size: 13px; color: var(--text-2); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+  .lcard-bonus {
+    background: var(--green-light); border: 1px solid rgba(5,150,105,.2);
+    border-radius: var(--radius-sm); padding: 10px 14px;
+    display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+  }
+  .bonus-amount { font-size: 14px; font-weight: 800; color: var(--green); }
+  .lcard-actions { display: flex; gap: 8px; }
+  .btn-join {
+    flex: 1; background: var(--blue); color: #fff; border: none;
+    padding: 10px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: var(--font); text-decoration: none;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    transition: all .2s;
+  }
+  .btn-join:hover { background: #1D4ED8; }
+  .btn-copy {
+    width: 38px; background: var(--bg-subtle); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); cursor: pointer; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s; flex-shrink: 0;
+  }
+  .btn-copy:hover { border-color: var(--blue); background: var(--blue-light); }
+  .btn-copy.copied { background: var(--green-light); border-color: var(--green); }
+
+  /* ── CALCULADORA ── */
+  .calc-overlay {
+    position: fixed; inset: 0; z-index: 500;
+    background: rgba(15,23,42,.55); backdrop-filter: blur(6px);
+    display: none; align-items: flex-end; justify-content: center;
+    padding: 20px;
+  }
+  .calc-overlay.open { display: flex; }
+  .calc-drawer {
+    background: var(--bg-card); border-radius: 20px 20px 0 0;
+    width: 100%; max-width: 600px; max-height: 85vh;
+    overflow-y: auto; padding: 32px 28px;
+    box-shadow: 0 -20px 60px rgba(0,0,0,.15);
+    animation: slideUp .3s ease;
+  }
+  @keyframes slideUp { from{transform:translateY(40px);opacity:0} to{transform:translateY(0);opacity:1} }
+  .calc-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+  .calc-title { font-size: 20px; font-weight: 800; color: var(--text); }
+  .calc-close {
+    width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg-subtle); cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); transition: all .2s;
+  }
+  .calc-close:hover { background: var(--red-light); color: var(--red); border-color: var(--red); }
+  .calc-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+  }
+  .calc-item:last-of-type { border-bottom: none; }
+  .calc-checkbox {
+    width: 20px; height: 20px; border-radius: 5px; border: 2px solid var(--border-hover);
+    cursor: pointer; appearance: none; flex-shrink: 0;
+    transition: all .15s; position: relative;
+  }
+  .calc-checkbox:checked { background: var(--blue); border-color: var(--blue); }
+  .calc-checkbox:checked::after {
+    content: '✓'; position: absolute; color: #fff;
+    font-size: 12px; font-weight: 900;
+    top: 50%; left: 50%; transform: translate(-50%,-53%);
+  }
+  .calc-item-icon { font-size: 22px; }
+  .calc-item-info { flex: 1; }
+  .calc-item-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .calc-item-note { font-size: 12px; color: var(--text-muted); }
+  .calc-item-bonus { font-size: 15px; font-weight: 800; color: var(--green); flex-shrink: 0; }
+  .calc-total {
+    background: var(--blue-light); border: 1px solid var(--blue-mid);
+    border-radius: var(--radius); padding: 20px 24px; margin-top: 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .calc-total-label { font-size: 14px; font-weight: 700; color: var(--text-2); }
+  .calc-total-amount { font-size: 28px; font-weight: 900; color: var(--blue); letter-spacing: -1px; }
+
+  /* ── DELIVERYLINK ── */
+  .dl-hero {
+    max-width: 1160px; margin: 0 auto; padding: 72px 20px 56px;
+    text-align: center;
+  }
+  .dl-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--gold-light); border: 1px solid rgba(217,119,6,.25);
+    color: var(--gold); font-size: 12px; font-weight: 700;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 24px;
+  }
+  .dl-hero h1 { color: var(--text); }
+  .dl-hero h1 em { color: var(--gold); }
+  .dl-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
+  .dl-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 24px;
+    box-shadow: var(--shadow-sm); transition: all .25s;
+  }
+  .dl-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .dl-card-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--blue-light); color: var(--blue);
+    font-size: 22px; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+  }
+  .dl-card-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .dl-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+  .dl-contact {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 40px 36px;
+    text-align: center; max-width: 600px; margin: 0 auto;
+    box-shadow: var(--shadow-md);
+  }
+  .dl-contact h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; color: var(--text); }
+  .dl-contact p { color: var(--text-muted); font-size: 14px; margin-bottom: 28px; }
+  .dl-contact-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-email {
+    background: var(--blue); color: #fff; border: none;
+    padding: 12px 24px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700;
+    cursor: pointer; font-family: var(--font); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px; transition: all .2s;
+  }
+  .btn-email:hover { background: #1D4ED8; }
+  .btn-phone {
+    background: var(--bg-subtle); color: var(--text-2); border: 1px solid var(--border);
+    padding: 12px 24px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700;
+    cursor: pointer; font-family: var(--font); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px; transition: all .2s;
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-phone:hover { border-color: var(--blue); color: var(--blue); }
+  .dl-info-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px; margin-bottom: 48px;
+  }
+  .dl-info-row {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 16px 18px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .dl-info-icon { font-size: 20px; flex-shrink: 0; }
+  .dl-info-label { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .dl-info-val { font-size: 14px; font-weight: 700; color: var(--text); }
+
+  /* ── AGENT ── */
+  .agent-wrap {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px;
+    box-shadow: var(--shadow-md); margin-bottom: 64px;
+  }
+  .agent-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .agent-avatar {
+    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex; align-items: center; justify-content: center; font-size: 20px;
+  }
+  .agent-name { font-size: 17px; font-weight: 800; color: var(--text); }
+  .agent-meta { font-size: 12px; color: var(--text-muted); }
+  .agent-live {
+    display: flex; align-items: center; gap: 5px; margin-left: auto;
+    font-size: 12px; font-weight: 700; color: var(--green);
+  }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s infinite; }
+  @keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 0 rgba(5,150,105,.4)} 50%{box-shadow:0 0 0 5px rgba(5,150,105,0)} }
+  .quick-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .qpill {
+    background: var(--bg-subtle); border: 1px solid var(--border);
+    color: var(--text-2); font-size: 12px; font-weight: 600;
+    padding: 5px 12px; border-radius: 20px; cursor: pointer;
+    font-family: var(--font); transition: all .2s;
+  }
+  .qpill:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+  .chat-win {
+    background: var(--bg-subtle); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); height: 320px;
+    overflow-y: auto; padding: 16px;
+    display: flex; flex-direction: column; gap: 14px;
+    margin-bottom: 12px;
+  }
+  .chat-win::-webkit-scrollbar { width: 3px; }
+  .chat-win::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .msg { display: flex; gap: 9px; align-items: flex-start; }
+  .msg.u { flex-direction: row-reverse; }
+  .msg-av {
+    width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 13px;
+  }
+  .msg-av.ai { background: linear-gradient(135deg, var(--blue), var(--purple)); color:#fff; }
+  .msg-av.u  { background: var(--bg-card2); }
+  .msg-bub {
+    max-width: 82%; padding: 10px 14px; border-radius: 12px;
+    font-size: 13px; line-height: 1.65;
+  }
+  .msg.ai .msg-bub { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); border-top-left-radius: 4px; }
+  .msg.u  .msg-bub { background: var(--blue); color: #fff; border-top-right-radius: 4px; }
+  .typing-bub { display: flex; gap: 4px; align-items: center; padding: 13px 16px !important; }
+  .td { width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted); animation: td .9s infinite; }
+  .td:nth-child(2){animation-delay:.2s} .td:nth-child(3){animation-delay:.4s}
+  @keyframes td { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+  .chat-row { display: flex; gap: 9px; }
+  .chat-inp {
+    flex: 1; background: var(--bg-subtle); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 11px 15px;
+    font-family: var(--font); font-size: 14px; color: var(--text); outline: none;
+    transition: border-color .2s;
+  }
+  .chat-inp:focus { border-color: var(--blue); background: var(--bg-card); }
+  .chat-inp::placeholder { color: var(--text-faint); }
+  .chat-send {
+    background: var(--blue); color: #fff; border: none;
+    padding: 11px 20px; border-radius: var(--radius-sm);
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    font-family: var(--font); transition: all .2s;
+  }
+  .chat-send:hover { background: #1D4ED8; }
+  .chat-send:disabled { opacity: .5; cursor: not-allowed; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg-card); padding: 36px 20px;
+  }
+  .foot-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
+  }
+  .foot-logo { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
+  .foot-logo span { color: var(--blue); }
+  .foot-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+  .foot-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+  .foot-links a:hover { color: var(--blue); }
+  .foot-legal { font-size: 11px; color: var(--text-faint); max-width: 600px; line-height: 1.7; }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    background: var(--text); color: var(--bg); font-size: 13px; font-weight: 600;
+    padding: 10px 18px; border-radius: 8px; box-shadow: var(--shadow-lg);
+    transform: translateY(60px); opacity: 0;
+    transition: all .3s; pointer-events: none;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:680px){
+    .header-inner { gap: 8px; }
+    .nav-tab span { display: none; }
+    .hero { padding: 48px 16px 36px; }
+    .hero-stats { gap: 28px; padding-top: 28px; }
+    .cards { grid-template-columns: 1fr; }
+    .dl-contact { padding: 28px 20px; }
+    .agent-live { width: 100%; }
+    .btn-calc span { display: none; }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ════════════ HEADER ════════════ -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-mark">LC</div>
+      <div class="logo-name">Link<span>Credit</span></div>
+    </a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showPage('linkcredit',this)">📊 <span>Referidos</span></button>
+      <button class="nav-tab" onclick="showPage('deliverylink',this)">🚚 <span>DELIVERYLINK</span></button>
+      <button class="nav-tab" onclick="showPage('agente',this)">🤖 <span>Agente IA</span></button>
+    </div>
+    <div class="header-right">
+      <button class="btn-calc" onclick="openCalc()">🧮 <span>Calcular bonos</span></button>
+      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Cambiar tema">☀️</button>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════ PAGE: LINK CREDIT ════════════ -->
+<div class="page active" id="page-linkcredit">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-pill"><div class="hero-pill-dot"></div>13 referidos verificados y activos</div>
+    <h1>¡Gana dinero<br/><em>conmigo</em> usando<br/>estos <strong>recursos</strong>!</h1>
+    <p class="hero-sub">Links de referidos financieros reales con bonos de registro. Tarjetas, cripto, cashback — curados por DELIVERYLINK LLC.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openCalc()">🧮 Calcular mis ganancias</button>
+      <a href="#referidos" class="btn-outline">Ver todos los recursos ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">13</div><div class="stat-label">Referidos activos</div></div>
+      <div class="stat"><div class="stat-num">$2,100+</div><div class="stat-label">En bonos disponibles</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Verificados</div></div>
+      <div class="stat"><div class="stat-num">0</div><div class="stat-label">Costo de registro</div></div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- REFERIDOS -->
+  <div class="wrap sec" id="referidos">
+    <div class="sec-head">
+      <div class="sec-eyebrow">Recursos verificados</div>
+      <h2>Links de referidos activos</h2>
+      <p class="sec-sub">Regístrate con estos links y obtén tu bono de bienvenida.</p>
+    </div>
+    <div class="filter-row">
+      <button class="ftab on" onclick="filterLinks('all',this)">✦ Todos</button>
+      <button class="ftab" onclick="filterLinks('destacado',this)">⭐ Destacados</button>
+      <button class="ftab" onclick="filterLinks('banca',this)">🏦 Banca</button>
+      <button class="ftab" onclick="filterLinks('cashback',this)">💰 Cashback</button>
+      <button class="ftab" onclick="filterLinks('tecnologia',this)">₿ Cripto & Tech</button>
+    </div>
+    <div class="cards" id="cardsGrid"></div>
+  </div>
+</div>
+
+<!-- ════════════ PAGE: DELIVERYLINK ════════════ -->
+<div class="page" id="page-deliverylink">
+  <div class="dl-hero wrap">
+    <div class="dl-badge">🏢 Empresa Activa en Florida</div>
+    <h1>DELIVERY<em>LINK</em> LLC</h1>
+    <p class="hero-sub">Servicios profesionales de entrega y logística en South Florida. Confiables, rápidos y bilingües.</p>
+  </div>
+
+  <div class="wrap sec">
+    <!-- INFO GRID -->
+    <div class="dl-info-grid">
+      <div class="dl-info-row">
+        <div class="dl-info-icon">📍</div>
+        <div><div class="dl-info-label">Ubicación</div><div class="dl-info-val">Loxahatchee, FL 33470</div></div>
+      </div>
+      <div class="dl-info-row">
+        <div class="dl-info-icon">📧</div>
+        <div><div class="dl-info-label">Email</div><div class="dl-info-val">ldvh@link-credit.com</div></div>
+      </div>
+      <div class="dl-info-row">
+        <div class="dl-info-icon">📞</div>
+        <div><div class="dl-info-label">Teléfono</div><div class="dl-info-val">(561) 679-0314</div></div>
+      </div>
+      <div class="dl-info-row">
+        <div class="dl-info-icon">🌐</div>
+        <div><div class="dl-info-label">Idiomas</div><div class="dl-info-val">Español / English</div></div>
+      </div>
+    </div>
+
+    <!-- BENEFIT CARDS -->
+    <div class="sec-head" style="margin-top:8px">
+      <div class="sec-eyebrow">Nuestros servicios</div>
+      <h2>¿Por qué elegirnos?</h2>
+    </div>
+    <div class="dl-cards">
+      <div class="dl-card">
+        <div class="dl-card-icon">🚚</div>
+        <div class="dl-card-title">Entregas Confiables</div>
+        <div class="dl-card-desc">Más de 3 años de experiencia en South Florida. Rastreo en tiempo real y entrega puntual garantizada.</div>
+      </div>
+      <div class="dl-card">
+        <div class="dl-card-icon">⚡</div>
+        <div class="dl-card-title">Respuesta Rápida</div>
+        <div class="dl-card-desc">Equipo ágil con soluciones personalizadas. Respondemos rápido y adaptamos el servicio a tus necesidades.</div>
+      </div>
+      <div class="dl-card">
+        <div class="dl-card-icon">🤝</div>
+        <div class="dl-card-title">Profesionalismo Total</div>
+        <div class="dl-card-desc">Estándares altos en cada entrega. Servicio bilingüe EN/ES para atender a toda la comunidad.</div>
+      </div>
+      <div class="dl-card">
+        <div class="dl-card-icon">🔗</div>
+        <div class="dl-card-title">Soluciones Integradas</div>
+        <div class="dl-card-desc">Logística + marketing digital + tecnología. Un solo socio para todas tus necesidades de negocio.</div>
+      </div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <div class="dl-contact">
+      <h3>¿Necesitas servicios de entrega?</h3>
+      <p>Contáctanos hoy. Evaluamos tu necesidad sin costo y te damos una solución a medida.</p>
+      <div class="dl-contact-btns">
+        <a href="mailto:ldvh@link-credit.com" class="btn-email">📧 Enviar Email</a>
+        <a href="tel:+15616790314" class="btn-phone">📞 (561) 679-0314</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PAGE: AGENTE IA ════════════ -->
+<div class="page" id="page-agente">
+  <div class="hero" style="padding-bottom:24px">
+    <div class="hero-pill"><div class="hero-pill-dot"></div>Powered by Claude AI</div>
+    <h1>Agente <em>Financiero</em> IA</h1>
+    <p class="hero-sub">Pregunta al agente sobre cualquier referido, bono o recurso financiero. Responde en español.</p>
+  </div>
+
+  <div class="wrap sec">
+    <div class="agent-wrap">
+      <div class="agent-head">
+        <div class="agent-avatar">🤖</div>
+        <div>
+          <div class="agent-name">Link Credit Agent</div>
+          <div class="agent-meta">DELIVERYLINK LLC · Claude AI</div>
+        </div>
+        <div class="agent-live"><div class="live-dot"></div>En línea</div>
+      </div>
+      <div class="quick-pills">
+        <button class="qpill" onclick="qp('¿Cuál es el mejor bono de registro ahora mismo?')">💰 Mejor bono</button>
+        <button class="qpill" onclick="qp('¿Qué referido me recomiendas para construir crédito?')">💳 Construir crédito</button>
+        <button class="qpill" onclick="qp('¿Cuál cripto tiene el bono más alto?')">₿ Cripto</button>
+        <button class="qpill" onclick="qp('¿Qué es DELIVERYLINK LLC?')">🏢 La empresa</button>
+        <button class="qpill" onclick="qp('¿Cómo funciona la calculadora de bonos?')">🧮 Calculadora</button>
+      </div>
+      <div class="chat-win" id="chatWin"></div>
+      <div class="chat-row">
+        <input class="chat-inp" id="chatInp" type="text" placeholder="Pregunta sobre recursos financieros, bonos, cripto..." maxlength="400"/>
+        <button class="chat-send" id="sendBtn" onclick="sendMsg()">Enviar →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Link<span>Credit</span> — DELIVERYLINK LLC</div>
+    <div class="foot-links">
+      <a href="#" onclick="showPage('linkcredit',document.querySelector('.nav-tab'))">Referidos</a>
+      <a href="#" onclick="showPage('deliverylink',document.querySelectorAll('.nav-tab')[1])">DELIVERYLINK</a>
+      <a href="#" onclick="showPage('agente',document.querySelectorAll('.nav-tab')[2])">Agente IA</a>
+      <a href="mailto:ldvh@link-credit.com">Contacto</a>
+    </div>
+    <p class="foot-legal">© 2026 DELIVERYLINK LLC · Loxahatchee, FL 33470 · Doc# L26000293288 · Este sitio contiene links de afiliados — podemos recibir compensación cuando usas nuestros links. Los bonos y condiciones son definidos por cada plataforma y pueden cambiar sin previo aviso.</p>
+  </div>
+</footer>
+
+<!-- CALCULADORA DRAWER -->
+<div class="calc-overlay" id="calcOverlay" onclick="closeCalcOutside(event)">
+  <div class="calc-drawer">
+    <div class="calc-header">
+      <div class="calc-title">🧮 Calculadora de Bonos</div>
+      <button class="calc-close" onclick="closeCalc()">✕</button>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px">Selecciona los referidos que planeas usar y ve cuánto puedes ganar.</p>
+    <div id="calcItems"></div>
+    <div class="calc-total">
+      <div>
+        <div class="calc-total-label">💰 Total de bonos seleccionados</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px">Estimado de bienvenida</div>
+      </div>
+      <div class="calc-total-amount" id="calcTotal">$0</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  DATOS — 13 REFERIDOS
+// ═══════════════════════════════════════════════════════
+const LINKS = [
+  {
+    id:'sofi', name:'SoFi', cat:'banca', featured:true,
+    icon:'🏦', color:'#6366F1',
+    bonus:'Hasta $425 USD', bonusNum:425,
+    desc:'Banco digital líder en USA. Cuenta de ahorro con alto APY, préstamos y tarjeta de crédito sin comisiones anuales.',
+    url:'https://www.sofi.com/invite/money?gcp=8af12d9e-b98e-4bfa-b356-e27e9ca08b38&isAliasGcp=false',
+    badges:['v','h']
+  },
+  {
+    id:'onepay', name:'OnePay Cash', cat:'cashback', featured:true,
+    icon:'💵', color:'#10B981',
+    bonus:'$50 cashback', bonusNum:50,
+    desc:'Cuenta bancaria moderna con cashback automático en compras. Sin cuota mensual ni saldo mínimo.',
+    url:'#',
+    badges:['v','n']
+  },
+  {
+    id:'rakuten', name:'Rakuten', cat:'cashback', featured:true,
+    icon:'🛍️', color:'#F59E0B',
+    bonus:'$50 USD', bonusNum:50,
+    desc:'Cashback automático en más de 3,500 tiendas online. Pago por cheque o PayPal cada trimestre.',
+    url:'https://www.rakuten.com/r/LUISV8903',
+    badges:['v','h']
+  },
+  {
+    id:'chime', name:'Chime', cat:'banca', featured:false,
+    icon:'🔵', color:'#00DC82',
+    bonus:'$50 – $200 USD', bonusNum:100,
+    desc:'Cuenta bancaria sin comisiones con acceso a más de 60,000 ATMs gratis. Recibe tu nómina 2 días antes.',
+    url:'#',
+    badges:['v','n']
+  },
+  {
+    id:'wise', name:'Wise', cat:'banca', featured:false,
+    icon:'🌍', color:'#37B2C8',
+    bonus:'$50 – $100 USD', bonusNum:50,
+    desc:'Transferencias internacionales al tipo de cambio real sin comisiones ocultas. Ideal para envíos al extranjero.',
+    url:'#',
+    badges:['v']
+  },
+  {
+    id:'uphold', name:'Uphold', cat:'tecnologia', featured:false,
+    icon:'📈', color:'#3B82F6',
+    bonus:'Bono variable', bonusNum:20,
+    desc:'Plataforma de activos digitales. Opera cripto, metales preciosos, forex y acciones desde una sola cuenta.',
+    url:'#',
+    badges:['v','g']
+  },
+  {
+    id:'cryptocom', name:'Crypto.com', cat:'tecnologia', featured:true,
+    icon:'💎', color:'#0033AD',
+    bonus:'Hasta $50 USD', bonusNum:50,
+    desc:'Exchange global con tarjeta Visa de cripto con cashback. Opera más de 250 criptomonedas con bajas comisiones.',
+    url:'#',
+    badges:['v','g','h']
+  },
+  {
+    id:'coinbase', name:'Coinbase', cat:'tecnologia', featured:true,
+    icon:'🔵', color:'#0052FF',
+    bonus:'$10 – $50 en BTC', bonusNum:10,
+    desc:'Exchange líder en USA. Compra Bitcoin, Ethereum y más de 200 criptos. Regulado y asegurado.',
+    url:'https://coinbase.com/join/W9YZFKP',
+    badges:['v','g']
+  },
+  {
+    id:'stripe', name:'Stripe', cat:'tecnologia', featured:false,
+    icon:'🏧', color:'#635BFF',
+    bonus:'Bonos para negocios', bonusNum:0,
+    desc:'Procesa pagos online de forma profesional. Ideal para negocios y freelancers. Sin cuota mensual.',
+    url:'#',
+    badges:['n']
+  },
+  {
+    id:'amazon', name:'Amazon Associates', cat:'cashback', featured:false,
+    icon:'📦', color:'#FF9900',
+    bonus:'Comisiones 1%–20%', bonusNum:0,
+    desc:'Programa de afiliados de Amazon. Gana comisiones recomendando cualquier producto en la plataforma.',
+    url:'#',
+    badges:['v','g']
+  },
+  {
+    id:'ubereats', name:'Uber Eats', cat:'cashback', featured:false,
+    icon:'🍔', color:'#06C167',
+    bonus:'Crédito de bienvenida', bonusNum:20,
+    desc:'Pedidos de comida a domicilio. Crédito de bienvenida al registrarte con referido. Amplia selección de restaurantes.',
+    url:'#',
+    badges:['n']
+  },
+  {
+    id:'doordash', name:'DoorDash', cat:'cashback', featured:false,
+    icon:'🛵', color:'#EF4444',
+    bonus:'Crédito en comidas', bonusNum:20,
+    desc:'Delivery de comida con amplia cobertura en USA. Crédito de bienvenida al usar referido.',
+    url:'#',
+    badges:['n']
+  },
+  {
+    id:'airbnb', name:'Airbnb', cat:'cashback', featured:false,
+    icon:'🏠', color:'#FF5A5F',
+    bonus:'Crédito de viaje', bonusNum:30,
+    desc:'Hospedaje único en más de 220 países. Crédito de bienvenida al reservar tu primer alojamiento.',
+    url:'#',
+    badges:['v']
+  }
+];
+
+const CAT_LABELS = {
+  destacado:'⭐ Destacado', banca:'🏦 Banca',
+  cashback:'💰 Cashback', tecnologia:'₿ Cripto & Tech'
+};
+const BADGE_CONF = {
+  v:['badge-v','✓ Verificado'],
+  h:['badge-h','🔥 Popular'],
+  n:['badge-n','★ Nuevo'],
+  g:['badge-g','₿ Cripto']
+};
+
+// ─── RENDER CARDS ──────────────────────────────
+function renderCards(filter='all'){
+  const data = filter==='all' ? LINKS
+    : filter==='destacado' ? LINKS.filter(l=>l.featured)
+    : LINKS.filter(l=>l.cat===filter);
+
+  document.getElementById('cardsGrid').innerHTML = data.map(l=>`
+    <div class="lcard" data-id="${l.id}">
+      <div class="lcard-top">
+        <div class="lcard-icon" style="background:${l.color}18;color:${l.color}">${l.icon}</div>
+        <div class="lcard-badges">${l.badges.map(b=>`<span class="badge ${BADGE_CONF[b][0]}">${BADGE_CONF[b][1]}</span>`).join('')}</div>
+      </div>
+      <div class="lcard-name">${l.name}</div>
+      <div class="lcard-cat">${CAT_LABELS[l.cat]||l.cat}</div>
+      <div class="lcard-desc">${l.desc}</div>
+      <div class="lcard-bonus"><span style="font-size:16px">🎁</span><span class="bonus-amount">${l.bonus}</span></div>
+      <div class="lcard-actions">
+        <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="btn-join">Unirme ahora →</a>
+        <button class="btn-copy" onclick="copyLink('${l.url}','${l.id}')" id="copy-${l.id}" title="Copiar link">📋</button>
+      </div>
+    </div>`).join('');
+}
+
+function filterLinks(cat, el){
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  renderCards(cat);
+}
+
+function copyLink(url, id){
+  if(url==='#'){ showToast('Link no disponible aún'); return; }
+  navigator.clipboard.writeText(url).then(()=>{
+    const btn = document.getElementById('copy-'+id);
+    btn.textContent='✓'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='📋'; btn.classList.remove('copied'); },2000);
+    showToast('¡Link copiado!');
+  });
+}
+
+// ─── CALCULADORA ───────────────────────────────
+function renderCalc(){
+  document.getElementById('calcItems').innerHTML = LINKS
+    .filter(l=>l.bonusNum>0)
+    .map(l=>`
+      <div class="calc-item">
+        <input type="checkbox" class="calc-checkbox" id="ch-${l.id}" onchange="updateTotal()" value="${l.bonusNum}"/>
+        <label for="ch-${l.id}" style="display:flex;align-items:center;gap:14px;flex:1;cursor:pointer">
+          <span class="calc-item-icon">${l.icon}</span>
+          <div class="calc-item-info">
+            <div class="calc-item-name">${l.name}</div>
+            <div class="calc-item-note">${l.cat==='tecnologia'?'Cripto & Tech':CAT_LABELS[l.cat]||l.cat}</div>
+          </div>
+        </label>
+        <div class="calc-item-bonus">+$${l.bonusNum}</div>
+      </div>`).join('');
+  updateTotal();
+}
+
+function updateTotal(){
+  const checked = document.querySelectorAll('.calc-checkbox:checked');
+  const total = Array.from(checked).reduce((s,c)=>s+Number(c.value),0);
+  document.getElementById('calcTotal').textContent = '$'+total.toLocaleString();
+}
+
+function openCalc(){ renderCalc(); document.getElementById('calcOverlay').classList.add('open'); }
+function closeCalc(){ document.getElementById('calcOverlay').classList.remove('open'); }
+function closeCalcOutside(e){ if(e.target.id==='calcOverlay') closeCalc(); }
+
+// ─── PAGE NAVIGATION ───────────────────────────
+function showPage(id, el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  if(el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ─── THEME TOGGLE ──────────────────────────────
+function toggleTheme(){
+  const root = document.documentElement;
+  const isDark = root.getAttribute('data-theme')==='dark';
+  root.setAttribute('data-theme', isDark?'light':'dark');
+  document.getElementById('themeBtn').textContent = isDark?'☀️':'🌙';
+}
+
+// ─── TOAST ─────────────────────────────────────
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+// ─── AGENTE IA ─────────────────────────────────
+const SYSTEM = `Eres el Agente Financiero de Link Credit, operado por DELIVERYLINK LLC (Florida, USA). Ayudas a usuarios a entender y elegir recursos financieros verificados.
+
+REFERIDOS DISPONIBLES:
+- SoFi: banco digital, hasta $425 bono (destacado)
+- OnePay Cash: $50 cashback
+- Rakuten: $50 cashback al gastar $30 (destacado)
+- Chime: $50-$200 banca sin comisiones
+- Wise: $50-$100 transferencias internacionales
+- Uphold: bono variable, cripto y activos
+- Crypto.com: hasta $50 (destacado)
+- Coinbase: $10-$50 en BTC - código W9YZFKP (destacado)
+- Stripe: bonos para negocios
+- Amazon Associates: comisiones 1%-20%
+- Uber Eats: crédito de bienvenida
+- DoorDash: crédito en comidas
+- Airbnb: crédito de viaje
+
+SOBRE DELIVERYLINK LLC:
+- LLC registrada en Florida, Mayo 2026 (Doc# L26000293288)
+- Email: ldvh@link-credit.com | Tel: (561) 679-0314
+- Servicios: logística, marketing digital, tecnología
+- Ubicación: Loxahatchee, FL 33470
+
+Responde SIEMPRE en español. Sé conciso y útil. Máximo 3 párrafos. Recomienda siempre usar la calculadora de bonos para estimar ganancias.`;
+
+let chatHist = [];
+
+function addMsg(role, text, typing=false){
+  const win = document.getElementById('chatWin');
+  const id = 'msg'+Date.now()+Math.random().toString(36).slice(2,6);
+  const isU = role==='user';
+  win.insertAdjacentHTML('beforeend',`
+    <div class="msg ${isU?'u':'ai'}" id="${id}">
+      <div class="msg-av ${isU?'u':'ai'}">${isU?'👤':'🤖'}</div>
+      ${typing
+        ?`<div class="msg-bub typing-bub"><div class="td"></div><div class="td"></div><div class="td"></div></div>`
+        :`<div class="msg-bub">${text.replace(/\n/g,'<br/>')}</div>`}
+    </div>`);
+  win.scrollTop = win.scrollHeight;
+  return id;
+}
+
+async function sendMsg(){
+  const inp = document.getElementById('chatInp');
+  const btn = document.getElementById('sendBtn');
+  const text = inp.value.trim();
+  if(!text) return;
+  inp.value=''; btn.disabled=true;
+  addMsg('user',text);
+  chatHist.push({role:'user',content:text});
+  const tid = addMsg('ai','',true);
+  try{
+    const res = await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:SYSTEM,
+        messages:chatHist
+      })
+    });
+    const d = await res.json();
+    const reply = d.content?.[0]?.text || 'No pude procesar tu mensaje. Intenta de nuevo.';
+    document.getElementById(tid)?.remove();
+    addMsg('ai',reply);
+    chatHist.push({role:'assistant',content:reply});
+  }catch{
+    document.getElementById(tid)?.remove();
+    addMsg('ai','Error de conexión. Por favor intenta de nuevo.');
+  }
+  btn.disabled=false;
+}
+
+function qp(text){ document.getElementById('chatInp').value=text; sendMsg(); }
+document.getElementById('chatInp').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey) sendMsg(); });
+
+// ─── INIT ──────────────────────────────────────
+renderCards();
+setTimeout(()=>addMsg('ai','¡Hola! Soy el Agente Financiero de Link Credit 👋\n\nPuedo ayudarte a encontrar el mejor bono de registro, explicarte cualquier referido o contarte sobre DELIVERYLINK LLC.\n\nUsa la calculadora 🧮 para ver cuánto puedes ganar con todos los referidos. ¿En qué te ayudo hoy?'),700);
+</script>
+</body>
+</html>
