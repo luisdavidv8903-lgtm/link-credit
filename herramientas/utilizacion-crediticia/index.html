@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de utilización crediticia | Link-Credit</title>
+<meta name="description" content="Calculadora gratuita de utilización crediticia: suma saldos y límites de tus tarjetas y obtén el porcentaje. Funciona en tu navegador, no guarda ni envía datos y no predice puntajes.">
+<link rel="canonical" href="https://link-credit.com/herramientas/utilizacion-crediticia/">
+
+<meta property="og:site_name" content="Link-Credit">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_US">
+<meta property="og:title" content="Calculadora de utilización crediticia | Link-Credit">
+<meta property="og:description" content="Calculadora gratuita de utilización crediticia: suma saldos y límites de tus tarjetas y obtén el porcentaje. Funciona en tu navegador, no guarda ni envía datos y no predice puntajes.">
+<meta property="og:url" content="https://link-credit.com/herramientas/utilizacion-crediticia/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#071e3d">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de utilización crediticia","url":"https://link-credit.com/herramientas/utilizacion-crediticia/","applicationCategory":"FinanceApplication","operatingSystem":"Cualquiera con navegador web","inLanguage":"es-US","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Link-Credit, inicio">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#123a6e"/><path d="M9 9v14h9" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 17l4 4 7-9" fill="none" stroke="#4ade80" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Link-<b>Credit</b></span>
+    </a>
+    <nav class="nav" aria-label="Principal"><a href="/">Inicio</a><a href="/credito-personal/">Crédito personal</a><a href="/credito-empresarial/">Crédito empresarial</a><a href="/guias/">Guías</a><a href="/herramientas/utilizacion-crediticia/" aria-current="page">Calculadora</a></nav>
+    <details class="menu">
+      <summary>Menú</summary>
+      <nav class="menu-list" aria-label="Principal (móvil)"><a href="/">Inicio</a><a href="/credito-personal/">Crédito personal</a><a href="/credito-empresarial/">Crédito empresarial</a><a href="/guias/">Guías</a><a href="/herramientas/utilizacion-crediticia/">Calculadora</a></nav>
+    </details>
+  </div>
+</header>
+<main id="contenido">
+<header class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Ruta de navegación"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › <span>Calculadora de utilización</span></nav><h1>Calculadora de utilización crediticia</h1><p>Calcula qué porcentaje de tu límite de crédito estás usando. Gratis y sin guardar nada.</p></div></header>
+<section><div class="wrap">
+<div class="prose mb26">
+  <p><strong>Utilización = saldo total ÷ límite total × 100.</strong> Escribe el saldo y el límite de cada tarjeta o línea revolvente.</p>
+  <div class="info"><strong>Privacidad:</strong> el cálculo ocurre en tu navegador. Lo que escribes no se envía, no se guarda y no se usa para ningún otro fin. Esta página no usa cookies de seguimiento.</div>
+</div>
+<noscript><p class="note">Esta calculadora necesita JavaScript. Puedes calcular a mano: suma tus saldos, suma tus límites, divide el primer total entre el segundo y multiplica por 100.</p></noscript>
+<form id="calc-form" class="calc" novalidate>
+  <fieldset>
+    <legend>Tus tarjetas o líneas de crédito</legend>
+    <div id="rows"></div>
+  </fieldset>
+  <div class="calc-actions">
+    <button type="button" id="add" class="btn btn-outline">+ Agregar tarjeta</button>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    <button type="button" id="clear" class="btn btn-outline">Borrar todo</button>
+  </div>
+  <p id="calc-error" class="error hidden" role="alert"></p>
+  <div id="result" class="result hidden" aria-live="polite">
+    <div class="big" id="pct">0 %</div>
+    <p class="m-top6"><strong>Nivel de uso:</strong> <span id="band"></span></p>
+    <div class="gauge" id="bar-box" role="progressbar" aria-label="Utilización" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="bar"></i></div>
+    <div class="scale" aria-hidden="true"><span>0 %</span><span>30 %</span><span>100 %</span></div>
+    <div class="stat-grid">
+      <div class="stat"><b id="tb">$0</b><span>Saldo total</span></div>
+      <div class="stat"><b id="tl">$0</b><span>Límite total</span></div>
+      <div class="stat"><b id="nc">0</b><span>Cuentas</span></div>
+    </div>
+    <p id="hint" class="mt16"></p>
+  </div>
+</form>
+<div class="prose">
+  <div class="note"><strong>Qué NO hace esta herramienta.</strong> No predice tu puntaje, no dice si te aprobarán un crédito y no sustituye el consejo de un profesional. El 30 % es una referencia práctica, no una regla oficial. Más contexto: <a href="/guias/utilizacion-crediticia/">cómo interpretar la utilización crediticia</a>.</div>
+  <p class="meta">Última actualización: <time datetime="2026-11-21">21 de noviembre de 2026</time>.</p>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Link-Credit</h2>
+        <p>Educación financiera práctica en español sobre crédito personal y empresarial. Contenido informativo: no somos un banco, un prestamista, una agencia de informes crediticios ni una empresa de reparación de crédito.</p>
+      </div>
+      <div>
+        <h2>Explora</h2>
+        <ul>
+          <li><a href="/credito-personal/">Crédito personal</a></li>
+          <li><a href="/credito-empresarial/">Crédito empresarial</a></li>
+          <li><a href="/guias/">Guías</a></li>
+          <li><a href="/herramientas/utilizacion-crediticia/">Calculadora de utilización</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Información</h2>
+        <ul>
+          <li><a href="/sobre-link-credit/">Sobre Link-Credit</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+          <li><a href="/aviso-educativo/">Aviso educativo</a></li>
+          <li><a href="/privacidad/">Política de privacidad</a></li>
+          <li><a href="/terminos/">Términos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal-line">© 2026 Link-Credit, operado por DELIVERYLINK LLC, Florida. Solo con fines educativos; no es asesoría financiera, legal ni fiscal.</p>
+  </div>
+</footer>
+<script src="/assets/calc-core.js" defer></script><script src="/assets/calc.js" defer></script>
+</body>
+</html>
