@@ -159,7 +159,7 @@ const calculadora = {
   body: wrap(`
 <div class="prose mb26">
   <p><strong>Utilización = saldo total ÷ límite total × 100.</strong> Escribe el saldo y el límite de cada tarjeta o línea revolvente.</p>
-  <div class="info"><strong>Privacidad:</strong> el cálculo ocurre en tu navegador. Lo que escribes no se envía, no se guarda y no se usa para ningún otro fin. Esta página no usa cookies de seguimiento.</div>
+  <div class="info"><strong>Privacidad:</strong> el cálculo ocurre en tu navegador. Lo que escribes no se envía, no se guarda y no se usa para ningún otro fin. En nuestra revisión técnica del 21 de noviembre de 2026, esta página no estableció cookies ni usó el almacenamiento del navegador.</div>
 </div>
 <noscript><p class="note">Esta calculadora necesita JavaScript. Puedes calcular a mano: suma tus saldos, suma tus límites, divide el primer total entre el segundo y multiplica por 100.</p></noscript>
 <form id="calc-form" class="calc" novalidate>
@@ -184,6 +184,7 @@ const calculadora = {
       <div class="stat"><b id="nc">0</b><span>Cuentas</span></div>
     </div>
     <p id="hint" class="mt16"></p>
+    <p class="minor">Los niveles (muy baja, baja, moderada, alta) son una referencia propia de esta herramienta, no categorías oficiales de ningún buró ni modelo de puntaje.</p>
   </div>
 </form>
 <div class="prose">
@@ -203,7 +204,7 @@ const guiasIndex = {
   crumbs: [["/", "Inicio"]],
   crumbTitle: "Guías",
   body: wrap(`
-<ul class="glist">${guides.map((g) => `<li class="card"><h3><a href="${g.path}">${g.h1}</a></h3><p>${g.lead}</p><p class="meta m0">Actualizada el <time datetime="${D}">${H}</time></p></li>`).join("")}</ul>
+<ul class="glist">${guides.map((g) => `<li class="card"><h2><a href="${g.path}">${g.h1}</a></h2><p>${g.lead}</p><p class="meta m0">Actualizada el <time datetime="${D}">${H}</time></p></li>`).join("")}</ul>
 <p class="meta mt24">También: <a href="/credito-personal/">Crédito personal</a> · <a href="/credito-empresarial/">Crédito empresarial</a> · <a href="/herramientas/utilizacion-crediticia/">Calculadora</a></p>`),
 };
 
@@ -226,7 +227,7 @@ const sobre = {
 <ul>
 <li>No somos un banco, un prestamista ni un corredor de préstamos.</li>
 <li>No somos una agencia de informes crediticios.</li>
-<li>No somos una empresa de reparación de crédito ni de "servicios de crédito" en el sentido de la ley.</li>
+<li>No ofrecemos servicios de reparación de crédito ni cobramos por intervenir en tus informes.</li>
 <li>No somos asesores financieros, abogados ni contadores.</li>
 </ul>
 <h2>Cómo trabajamos</h2>
@@ -271,29 +272,29 @@ const privacidad = {
   path: "/privacidad/",
   title: "Política de privacidad",
   h1: "Política de privacidad",
-  lead: "Qué datos trata este sitio (casi ninguno) y cómo contactarnos.",
-  description: "Política de privacidad de Link-Credit: no pedimos datos sensibles, no usamos herramientas de seguimiento ni publicidad, y la calculadora funciona solo en tu navegador.",
+  lead: "Qué datos trata este sitio, qué terceros intervienen y cómo contactarnos.",
+  description: "Política de privacidad de Link-Credit: no pedimos datos sensibles, la calculadora funciona solo en tu navegador y Cloudflare aloja el sitio y procesa datos técnicos de la visita.",
   updated: D,
   crumbs: [["/", "Inicio"]],
   crumbTitle: "Privacidad",
   body: prose(`${stamp}
 <h2>Resumen</h2>
-<p>Este sitio es informativo. No tiene cuentas de usuario, formularios de solicitud ni pagos, y no pide datos sensibles.</p>
+<p>Este sitio es informativo. No tiene cuentas de usuario, formularios de solicitud ni pagos, y no pide datos sensibles (número de Seguro Social, cuentas bancarias, contraseñas).</p>
 <h2>La calculadora</h2>
-<p>Los números que escribes en la calculadora se procesan únicamente en tu navegador. No se envían a nuestros servidores, no se guardan en cookies ni en el almacenamiento del navegador y no se comparten con terceros.</p>
-<h2>Seguimiento y publicidad</h2>
-<p>No usamos herramientas de analítica, píxeles de publicidad ni cookies de seguimiento de terceros.</p>
-<h2>Registros técnicos</h2>
-<p>Como cualquier sitio web, el servicio que lo aloja (Cloudflare) puede procesar datos técnicos como la dirección IP y el tipo de navegador para entregar las páginas y proteger el servicio. Consulta la política de privacidad de Cloudflare para más información.</p>
+<p>Los números que escribes en las calculadoras se procesan únicamente en tu navegador. El código de la calculadora no los envía a ningún servidor, no los guarda en cookies ni en el almacenamiento del navegador y no los comparte con terceros.</p>
+<h2>Cookies y almacenamiento local</h2>
+<p>En nuestra revisión técnica del 21 de noviembre de 2026, las páginas públicas no establecieron cookies ni usaron el almacenamiento local o de sesión del navegador. El proveedor de alojamiento podría activar funciones de seguridad que sí usen cookies (por ejemplo, un desafío anti-bots); si eso cambia, actualizaremos esta página.</p>
+<h2>Terceros que intervienen: Cloudflare</h2>
+<p>El sitio se aloja y se protege con Cloudflare. Para entregar las páginas y proteger el servicio, Cloudflare procesa datos técnicos de cada visita, como la dirección IP, el tipo de navegador y la página solicitada, y puede generar estadísticas agregadas de tráfico. Consulta la política de privacidad de Cloudflare para más información.</p>
+<p>Cloudflare también puede insertar de forma automática, en las páginas que entrega, scripts propios de medición de visitas y de detección de bots. Este sitio aplica una política de seguridad de contenido que, en los navegadores compatibles, impide que esos scripts se ejecuten. No usamos Google Analytics, píxeles de publicidad ni herramientas propias de seguimiento.</p>
 <h2>Si nos escribes</h2>
-<p>Si nos envías un correo, usaremos tus datos solo para responderte. No los vendemos ni los compartimos con fines de publicidad. Te pedimos no enviar datos sensibles; si lo haces por error, avísanos y lo eliminaremos.</p>
+<p>Si nos envías un correo o nos llamas, usaremos tus datos solo para responderte. No los vendemos ni los compartimos con fines de publicidad. Te pedimos no enviar datos sensibles; si lo haces por error, avísanos y lo eliminaremos.</p>
 <h2>Enlaces externos</h2>
-<p>Las guías enlazan a sitios de terceros (por ejemplo, la CFPB o la FTC). Esos sitios tienen sus propias políticas.</p>
+<p>Las guías enlazan a sitios de terceros (por ejemplo, la CFPB o la FTC). Esos sitios tienen sus propias políticas y pueden usar cookies.</p>
 <h2>Contacto</h2>
 <p>Para preguntas sobre privacidad: ${mailto}.</p>`),
 };
 
-/* ───────── Términos ───────── */
 const terminos = {
   path: "/terminos/",
   title: "Términos de uso",

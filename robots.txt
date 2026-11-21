@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
 
 Sitemap: https://link-credit.com/sitemap.xml

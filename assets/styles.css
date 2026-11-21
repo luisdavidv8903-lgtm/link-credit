@@ -227,3 +227,8 @@ table.t th { background: #eef3fa; color: var(--navy); }
 .source-line { font-size: 15px; font-weight: 600; color: #3f506a; }
 @media (max-width: 890px) { .case, .qcalc { grid-template-columns: 1fr; gap: 28px; } .guide3 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 580px) { .guide3, .qcalc .fg { grid-template-columns: 1fr; } .tile, .case-block { padding: 24px; } .brand { font-size: 20px; } }
+
+.glist .card h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+.glist .card h2 a { text-decoration: none; color: var(--navy); }
+.glist .card h2 a:hover { text-decoration: underline; }
+.table-scroll:focus-visible { outline: 3px solid #2f7de1; outline-offset: 2px; }

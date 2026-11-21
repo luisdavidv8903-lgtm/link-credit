@@ -51,7 +51,12 @@ ${robots}
 <meta property="og:title" content="${esc(p.fullTitle || p.title + " | Link-Credit")}">
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:url" content="${url}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${SITE.origin}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Link-Credit: entiende tu crédito, decide con criterio. Educación financiera en español.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE.origin}/assets/og-image.png">
 <meta name="theme-color" content="#071e3d">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/styles.css">
@@ -132,7 +137,6 @@ writeFileSync(
   join(root, "robots.txt"),
   `User-agent: *
 Allow: /
-Disallow: /admin
 
 Sitemap: ${SITE.origin}/sitemap.xml
 `

@@ -20,12 +20,14 @@ for (const p of pages) {
   const h = readFileSync(f, "utf8");
   const t = (h.match(/<title>(.*?)<\/title>/) || [])[1];
   const d = (h.match(/<meta name="description" content="(.*?)">/) || [])[1];
-  if (!t || t.length > 70) err(`${p.path}: título ausente o >70 (${t && t.length})`);
+  if (!t || t.length > 60) err(`${p.path}: título ausente o >70 (${t && t.length})`);
   if (!d || d.length < 70 || d.length > 200) err(`${p.path}: descripción fuera de 70–200 (${d && d.length})`);
   if (titles.has(t)) err(`${p.path}: título duplicado`); titles.add(t);
   if (descs.has(d)) err(`${p.path}: descripción duplicada`); descs.add(d);
   if (!h.includes(`<link rel="canonical" href="${SITE.origin}${p.path}">`)) err(`${p.path}: canonical`);
   if (!h.includes('property="og:title"')) err(`${p.path}: og:title`);
+  if (!h.includes('property="og:image"')) err(`${p.path}: og:image`);
+  { const hs = [...h.matchAll(/<h([1-6])[ >]/g)].map((m) => +m[1]); for (let i = 1; i < hs.length; i++) if (hs[i] > hs[i - 1] + 1) err(`${p.path}: salto de encabezados h${hs[i - 1]} a h${hs[i]}`); }
   if ((h.match(/<h1[ >]/g) || []).length !== 1) err(`${p.path}: debe haber exactamente un h1`);
   if (!h.includes('<html lang="es">')) err(`${p.path}: lang`);
   if (/ style="/.test(h)) err(`${p.path}: estilo en línea (rompe CSP)`);
@@ -42,7 +44,7 @@ for (const p of pages) {
 }
 const sm = readFileSync(join(root, "sitemap.xml"), "utf8");
 for (const p of pages) if (!p.noindex && !p.notFound && !sm.includes(`${SITE.origin}${p.path}</loc>`)) err(`sitemap: falta ${p.path}`);
-for (const f of ["admin.html", "chambeando/privacy/index.html"]) if (!existsSync(join(root, f))) err(`se perdió ${f}`);
+for (const f of ["assets/og-image.png", "admin.html", "chambeando/privacy/index.html"]) if (!existsSync(join(root, f))) err(`se perdió ${f}`);
 
 console.log(`páginas: ${pages.length}, enlaces revisados: ${links}`);
 if (errors.length) { console.log(errors.join("\n")); process.exit(1); }

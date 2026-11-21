@@ -43,10 +43,10 @@
 
   function band(pct) {
     if (pct > 100) return { key: "high", label: "Por encima del límite total" };
-    if (pct >= 75) return { key: "high", label: "Muy alta" };
-    if (pct >= 50) return { key: "high", label: "Alta" };
-    if (pct >= 30) return { key: "mid", label: "Moderada" };
-    if (pct >= 10) return { key: "low", label: "Baja" };
+    if (pct > 75) return { key: "high", label: "Muy alta" };
+    if (pct > 50) return { key: "high", label: "Alta" };
+    if (pct > 30) return { key: "mid", label: "Moderada" };
+    if (pct > 10) return { key: "low", label: "Baja" };
     return { key: "low", label: "Muy baja" };
   }
 

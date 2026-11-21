@@ -87,6 +87,7 @@ export const guides = [
 
   guide({
     slug: "credito-personal-vs-empresarial",
+    short: "Crédito personal vs. empresarial: diferencias",
     title: "Diferencias entre crédito personal y crédito empresarial",
     lead: "Son historiales distintos, con reglas y accesos distintos. Entender la diferencia evita decisiones basadas en promesas.",
     description: "Cómo se diferencian el crédito personal y el crédito empresarial: quién se evalúa, qué burós intervienen, qué es una garantía personal y por qué una LLC nueva no tiene crédito propio automáticamente.",
@@ -94,7 +95,7 @@ export const guides = [
     html: `
 <h2>La idea central</h2>
 <p>El crédito personal evalúa a una persona. El crédito empresarial evalúa a una empresa. Aunque en un negocio nuevo ambos suelen estar muy ligados, son historiales distintos con informes distintos.</p>
-<div class="table-scroll"><table class="t">
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla comparativa, desplazable"><table class="t">
 <thead><tr><th>Aspecto</th><th>Crédito personal</th><th>Crédito empresarial</th></tr></thead>
 <tbody>
 <tr><td>A quién se evalúa</td><td>A ti como individuo.</td><td>A la empresa (aunque el prestamista también puede mirar al dueño).</td></tr>
@@ -120,7 +121,7 @@ export const guides = [
 
   guide({
     slug: "perfil-crediticio-llc-nueva",
-    short: "Perfil crediticio de una LLC nueva: primeros pasos",
+    short: "Perfil crediticio de una LLC nueva",
     title: "Primeros pasos para establecer el perfil crediticio de una LLC",
     lead: "Una ruta ordenada y realista. Sin atajos, porque el historial se construye con el tiempo.",
     description: "Pasos prácticos para una LLC recién creada: EIN, separación de finanzas, número D-U-N-S, proveedores con términos de pago y monitoreo. Con advertencias sobre promesas de crédito instantáneo.",

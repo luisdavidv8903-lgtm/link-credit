@@ -24,5 +24,7 @@ bad([{ balance: "", limit: "" }]);                    // sin datos
 bad([]);
 
 assert.equal(band(5).key, "low"); assert.equal(band(20).key, "low");
+assert.equal(band(30).label, "Baja"); assert.equal(band(30.1).label, "Moderada"); assert.equal(band(10).label, "Muy baja"); // coherente con "30 % o menos"
+assert.equal(band(100).label, "Muy alta"); assert.equal(band(100.01).key, "high");
 assert.equal(band(40).key, "mid"); assert.equal(band(80).key, "high"); assert.equal(band(150).key, "high");
 console.log("calc.test OK");
