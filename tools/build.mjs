@@ -14,14 +14,14 @@ const NAV = [
   ["/", "Inicio"],
   ["/credito-personal/", "Crédito personal"],
   ["/credito-empresarial/", "Crédito empresarial"],
-  ["/guias/", "Guías"],
   ["/herramientas/utilizacion-crediticia/", "Calculadora"],
+  ["/guias/", "Explorar guías", "navbtn"],
 ];
 
 function navLinks(current) {
-  return NAV.map(([href, label]) => {
+  return NAV.map(([href, label, cls]) => {
     const on = current === href || (href !== "/" && current.startsWith(href.split("/").slice(0, 2).join("/") + "/") && href.split("/")[1] === current.split("/")[1]);
-    return `<a href="${href}"${on ? ' aria-current="page"' : ""}>${label}</a>`;
+    return `<a href="${href}"${cls ? ` class="${cls}"` : ""}${on && !cls ? ' aria-current="page"' : ""}>${label}</a>`;
   }).join("");
 }
 
@@ -61,10 +61,7 @@ ${ld}
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Link-Credit, inicio">
-      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#123a6e"/><path d="M9 9v14h9" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 17l4 4 7-9" fill="none" stroke="#4ade80" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Link-<b>Credit</b></span>
-    </a>
+    <a class="brand" href="/" aria-label="Link-Credit, inicio"><span class="mark" aria-hidden="true">↗</span><span>link-credit<small>EDUCACIÓN FINANCIERA</small></span></a>
     <nav class="nav" aria-label="Principal">${navLinks(p.path)}</nav>
     <details class="menu">
       <summary>Menú</summary>

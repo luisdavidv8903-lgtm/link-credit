@@ -7,7 +7,7 @@ import { SRC, SITE } from "./site.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const known = new Set(Object.values(SRC).map((v) => v[1]));
-const extra = new Set(["https://www.annualcreditreport.com/"]); // sitio oficial usado en el texto
+const extra = new Set(["https://www.annualcreditreport.com/", "https://www.sba.gov/", "https://www.fdic.gov/"]); // sitio oficial usado en el texto
 const errors = [];
 const err = (m) => errors.push(m);
 const fileFor = (p) => (p.endsWith("/") ? join(root, p, "index.html") : join(root, p));

@@ -25,83 +25,114 @@ const home = {
     inLanguage: "es-US",
     description: "Educación financiera en español sobre crédito personal y empresarial.",
   },
+  scripts: ["/assets/calc-core.js", "/assets/home-calc.js"],
   body: `
-<section class="hero"><div class="wrap">
-  <h1>Entiende tu crédito. <em>Decide con criterio.</em></h1>
-  <p>Educación financiera en español sobre crédito personal y empresarial: explicaciones claras, ejemplos y fuentes oficiales. Para que tomes tus decisiones con información, no con promesas.</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="/credito-empresarial/">Crédito empresarial</a>
-    <a class="btn btn-ghost" href="/herramientas/utilizacion-crediticia/">Calculadora de utilización</a>
+<section class="hero"><div class="wrap hero-in">
+  <div>
+    <span class="eyebrow"><i></i> INFORMACIÓN CLARA · EN ESPAÑOL</span>
+    <h1>Entiende tu crédito.<br><em>Decide con criterio.</em></h1>
+    <p>Aprende a fortalecer tu crédito personal y a construir el historial financiero de un negocio nuevo. Explicaciones prácticas, experiencias reales y herramientas gratuitas, sin promesas de aprobaciones ni resultados garantizados.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="/credito-empresarial/">Aprender crédito empresarial ↗</a>
+      <a class="btn btn-ghost" href="/credito-personal/">Empezar por crédito personal</a>
+    </div>
+    <div class="hero-note">Educación financiera independiente. No somos un banco ni una agencia de crédito.</div>
   </div>
+  <aside class="feature" aria-label="Ruta práctica para negocios nuevos">
+    <div class="kicker">Ruta práctica para negocios nuevos</div>
+    <h2>Una LLC nueva también necesita estrategia financiera.</h2>
+    <div class="step"><div class="num">1</div><div><strong>Separar la actividad empresarial</strong><small>Identidad legal, cuentas y registros claros.</small></div></div>
+    <div class="step"><div class="num">2</div><div><strong>Construir historial verificable</strong><small>Pagos responsables y proveedores que realmente reporten.</small></div></div>
+    <div class="step"><div class="num">3</div><div><strong>Evaluar crédito con números</strong><small>Tasas, garantías personales, costos y flujo de caja.</small></div></div>
+    <div class="step"><div class="num">4</div><div><strong>Proteger el capital</strong><small>No endeudarse únicamente por puntos o límites.</small></div></div>
+  </aside>
 </div></section>
 
-${wrap(`
-<h2 class="section-title">Por dónde empezar</h2>
-<p class="section-lead">Elige el tema que más te sirve hoy. Cada página explica los conceptos, los riesgos y las preguntas que conviene hacer antes de decidir.</p>
-<div class="grid grid-3">
-  <article class="card priority"><span class="tag">Prioridad</span><h3>Crédito empresarial</h3><p>Cómo funciona el crédito de una empresa, qué piden los prestamistas y qué errores evitar en una LLC nueva.</p><a class="more" href="/credito-empresarial/">Leer la guía</a></article>
-  <article class="card"><h3>Crédito personal</h3><p>Historial de pagos, utilización, informes, consultas y puntajes, explicados sin tecnicismos.</p><a class="more" href="/credito-personal/">Leer la guía</a></article>
-  <article class="card"><h3>Calculadora de utilización</h3><p>Calcula el porcentaje de tu crédito que estás usando. Funciona en tu navegador y no guarda tus datos.</p><a class="more" href="/herramientas/utilizacion-crediticia/">Usar la calculadora</a></article>
-</div>`)}
+<div class="sliver"><div class="wrap"><strong>La meta no es un número bonito: es una posición financiera más sólida.</strong><span>Guías fundamentadas en fuentes oficiales y experiencia práctica.</span></div></div>
 
 ${wrap(`
-<h2 class="section-title">Guías para leer con calma</h2>
-<p class="section-lead">Cinco guías originales, con fuentes oficiales y fecha de actualización.</p>
-<ul class="glist">${guides.map((g) => `<li class="card"><h3><a href="${g.path}">${g.h1}</a></h3><p>${g.lead}</p></li>`).join("")}</ul>
-<p class="mt20"><a href="/guias/">Ver todas las guías</a></p>`, "band")}
-
-${wrap(`
+<div class="eyk">Aprende a tu ritmo</div>
+<h2 class="section-title">Dos caminos. Una misma disciplina financiera.</h2>
+<p class="section-lead">El historial de una persona y el de una empresa se relacionan, pero no son lo mismo. Aquí los analizamos por separado, sin atajos ni promesas.</p>
 <div class="grid grid-2">
-  <div>
-    <h2 class="section-title">Qué hacemos</h2>
-    <ul class="checks">
-      <li>Explicar conceptos de crédito en español claro.</li>
-      <li>Citar fuentes oficiales (CFPB, FTC, SBA, FDIC, IRS y los propios burós).</li>
-      <li>Señalar riesgos y errores frecuentes.</li>
-      <li>Ofrecer una calculadora que no guarda ni envía tus datos.</li>
-    </ul>
-  </div>
-  <div>
-    <h2 class="section-title">Lo que no hacemos</h2>
-    <ul class="checks no">
-      <li>No reparamos ni "limpiamos" crédito.</li>
-      <li>No vendemos ni alquilamos líneas de crédito ni calificaciones.</li>
-      <li>No tramitamos solicitudes de préstamos ni tarjetas.</li>
-      <li>No pedimos tu Seguro Social ni tus datos bancarios.</li>
-      <li>No prometemos puntajes, aprobaciones ni resultados.</li>
-    </ul>
-  </div>
+  <article class="tile"><div class="icon" aria-hidden="true">01</div><h3>Crédito personal</h3><p>Entiende tus reportes, qué influye en las puntuaciones y cómo evitar decisiones que encarezcan tus deudas.</p><ul class="chips"><li>Utilización</li><li>Historial de pagos</li><li>Consultas</li><li>Reportes</li></ul><a class="more" href="/credito-personal/">Ver crédito personal</a></article>
+  <article class="tile"><div class="icon green" aria-hidden="true">02</div><h3>Crédito empresarial</h3><p>Qué cambia al abrir una LLC, cómo evaluar proveedores con términos de pago y por qué una aprobación no equivale a solvencia.</p><ul class="chips"><li>LLC nueva</li><li>D-U-N-S</li><li>Net terms</li><li>Flujo de caja</li></ul><a class="more" href="/credito-empresarial/">Ver crédito empresarial</a></article>
 </div>`)}
 
 ${wrap(`
-<div class="card">
-  <h2 class="section-title">Experiencia real</h2>
-  <p>Estamos preparando un relato propio sobre lo que se aprende al construir crédito empresarial con una LLC nueva. Lo publicaremos solo con hechos que podamos sostener y sin datos privados.</p>
-  <p><a class="more" href="/experiencia-real/">Ver el estado de esta sección</a></p>
-</div>`)}
+<div class="case">
+  <div>
+    <div class="eyk">Experiencia documentable</div>
+    <h2 class="section-title">Lo que aprendí construyendo crédito con una empresa nueva.</h2>
+    <p class="section-lead">Este proyecto nace de decisiones reales al organizar el crédito personal y empresarial. Compartimos los pasos útiles y también las limitaciones: algunas solicitudes se aprueban, otras no; los productos cambian y el resultado de cada persona puede ser diferente.</p>
+    <p class="minor">No publicamos límites, puntuaciones, estados de cuenta ni datos de terceros sin autorización. Un caso personal no demuestra que otra persona vaya a obtener el mismo resultado.</p>
+    <p><a class="btn btn-outline" href="/experiencia-real/">Leer los principios</a></p>
+  </div>
+  <div class="case-block"><h3>Principios que sí se pueden explicar</h3>
+    <div class="case-row"><div class="check" aria-hidden="true">✓</div><div><b>Separar finanzas personales y comerciales</b><p>Cuenta bancaria empresarial, registros y control de gastos.</p></div></div>
+    <div class="case-row"><div class="check" aria-hidden="true">✓</div><div><b>Comprobar quién reporta y dónde</b><p>Un proveedor «net terms» no siempre genera el historial esperado.</p></div></div>
+    <div class="case-row"><div class="check" aria-hidden="true">✓</div><div><b>Evaluar ofertas sin obsesionarse con el límite</b><p>La tasa, el costo total y el capital disponible importan más.</p></div></div>
+    <div class="case-row"><div class="check" aria-hidden="true">✓</div><div><b>Diferenciar crédito del negocio y garantía personal</b><p>Una empresa joven puede seguir dependiendo del perfil de su propietario.</p></div></div>
+  </div>
+</div>`, "band")}
+
+${wrap(`
+<div class="eyk">Biblioteca inicial</div>
+<h2 class="section-title">Empieza con preguntas que realmente importan.</h2>
+<p class="section-lead">Cada guía es un artículo original con fuentes oficiales y fecha de actualización.</p>
+<div class="guide3">${guides.map((g, i) => `<article class="guide"><span class="label">${["Crédito personal", "Personal y empresarial", "Negocios nuevos", "Decisiones de crédito", "Límites y deuda"][i]}</span><h3><a href="${g.path}">${g.h1}</a></h3><p>${g.lead}</p><a class="more" href="${g.path}">Leer guía</a></article>`).join("")}
+<article class="guide"><span class="label">Todas</span><h3><a href="/guias/">Ver la biblioteca completa</a></h3><p>Las cinco guías en un solo lugar, con la fecha de la última actualización.</p><a class="more" href="/guias/">Ir a las guías</a></article></div>`)}
+
+${wrap(`
+<div class="eyk">Herramienta gratuita</div>
+<h2 class="section-title">Calcula la utilización de tus tarjetas</h2>
+<p class="section-lead">Introduce tu saldo total y tu límite total. El cálculo ocurre únicamente en tu navegador, sin enviar ni almacenar información.</p>
+<div class="qcalc">
+  <form id="qform" novalidate>
+    <strong>Utilización total estimada</strong>
+    <div class="fg">
+      <div class="field"><label for="qb">Saldo combinado (USD)</label><input id="qb" type="number" min="0" step="0.01" value="600" inputmode="decimal" autocomplete="off"></div>
+      <div class="field"><label for="ql">Límite combinado (USD)</label><input id="ql" type="number" min="0.01" step="0.01" value="3000" inputmode="decimal" autocomplete="off"></div>
+    </div>
+    <p class="minor">Fórmula: (saldo total ÷ límite total) × 100. No predice tu puntuación ni sustituye las reglas de un prestamista. Para varias tarjetas, usa la <a href="/herramientas/utilizacion-crediticia/">calculadora completa</a>.</p>
+  </form>
+  <div class="qres"><span>Porcentaje calculado</span><output class="big" id="qpct" for="qb ql" aria-live="polite">20 %</output><span id="qhelp">Una referencia matemática, no una garantía de puntaje.</span></div>
+</div>`, "band")}
+
+${wrap(`
+<div class="eyk">Fuentes y transparencia</div>
+<h2 class="section-title">Preferimos fuentes verificables.</h2>
+<p class="section-lead">Los consejos generales deben distinguirse de las experiencias personales, los programas de tarjetas cambian y una buena puntuación no garantiza una aprobación.</p>
+<p class="source-line">Fuentes de referencia: <a href="${SRC.cfpbTools[1]}" rel="noopener" target="_blank">CFPB</a> · <a href="${SRC.ftcScams[1]}" rel="noopener" target="_blank">FTC</a> · <a href="https://www.sba.gov/" rel="noopener" target="_blank">SBA</a> · <a href="https://www.fdic.gov/" rel="noopener" target="_blank">FDIC</a></p>
+<p class="minor">Link-Credit no está afiliado a la CFPB, la FTC, la SBA ni la FDIC. Más en el <a href="/aviso-educativo/">aviso educativo</a>.</p>`)}
 `,
 };
 
-/* ───────── Experiencia real (placeholder noindex) ───────── */
+/* ───────── Experiencia real ───────── */
 const experiencia = {
   path: "/experiencia-real/",
-  title: "Experiencia real: en preparación",
+  title: "Experiencia: crédito con una empresa nueva",
   h1: "Lo que aprendí construyendo crédito empresarial con una LLC nueva",
-  lead: "Esta sección está en preparación.",
-  description: "Sección en preparación: un relato propio sobre construir crédito empresarial con una LLC nueva, sin datos privados ni promesas.",
-  noindex: true,
+  lead: "Principios que se pueden explicar, límites claros y nada de promesas.",
+  description: "Principios aprendidos al organizar el crédito personal y empresarial de una LLC nueva: separar finanzas, comprobar quién reporta, evaluar ofertas y entender la garantía personal.",
   updated: D,
   crumbs: [["/", "Inicio"]],
   crumbTitle: "Experiencia real",
-  body: prose(`
-<p>Todavía no hemos publicado este relato. Cuando lo hagamos, seguirá estas reglas:</p>
-<ul>
-<li>Contará lo que ocurrió y lo que se aprendió, en orden y con fechas verificables.</li>
-<li>No inventará resultados ni los presentará como garantía para nadie.</li>
-<li>No incluirá puntajes, límites, saldos, documentos, nombres de terceros ni capturas de cuentas privadas, a menos que el titular decida expresamente compartirlos.</li>
-<li>Dirá con claridad qué es experiencia personal y qué es información general con fuente oficial.</li>
-</ul>
-<p>Mientras tanto, la <a href="/credito-empresarial/">guía de crédito empresarial</a> reúne lo que ya podemos respaldar con fuentes.</p>`),
+  body: prose(`${stamp}
+<p>Este proyecto nace de decisiones reales al organizar el crédito personal y empresarial de una empresa nueva. Aquí compartimos los principios útiles y también las limitaciones: algunas solicitudes se aprueban, otras no; los productos cambian y el resultado de cada persona puede ser diferente.</p>
+<div class="info"><strong>Qué no publicamos.</strong> Límites, puntuaciones, saldos, estados de cuenta, documentos ni datos de terceros, sin autorización. Un caso personal no demuestra que otra persona vaya a obtener el mismo resultado.</div>
+<h2>Principios que sí se pueden explicar</h2>
+<h3>1. Separar finanzas personales y comerciales</h3>
+<p>Una cuenta bancaria empresarial, registros ordenados y control de gastos hacen visible lo que pasa en el negocio y evitan confusiones. Detalle en la guía de <a href="/guias/perfil-crediticio-llc-nueva/">primeros pasos para una LLC</a>.</p>
+<h3>2. Comprobar quién reporta y dónde</h3>
+<p>Un proveedor con términos de pago («net terms») no siempre genera el historial que esperas: pregunta si reporta a algún buró comercial antes de contar con ello.</p>
+<h3>3. Evaluar ofertas sin obsesionarse con el límite</h3>
+<p>La tasa, el costo total y el capital disponible importan más que el número del límite. Usa la lista de <a href="/guias/evaluar-tarjeta-empresarial/">cómo evaluar una tarjeta empresarial</a>.</p>
+<h3>4. Diferenciar el crédito del negocio de la garantía personal</h3>
+<p>Una empresa joven puede seguir dependiendo del perfil de su propietario. Entiende <a href="/guias/credito-personal-vs-empresarial/">qué responde la empresa y qué respondes tú</a>.</p>
+<h2>Y mientras tanto</h2>
+<p>Seguiremos añadiendo aprendizajes solo cuando podamos sostenerlos con hechos o con fuentes oficiales. Para el panorama completo, empieza por la <a href="/credito-empresarial/">guía de crédito empresarial</a>.</p>
+<div class="note"><strong>Advertencia.</strong> Experiencia personal no es asesoría financiera, legal ni fiscal y no garantiza resultados para nadie. Consulta el <a href="/aviso-educativo/">aviso educativo</a>.</div>`),
 };
 
 /* ───────── Calculadora ───────── */
@@ -246,7 +277,6 @@ const privacidad = {
   crumbs: [["/", "Inicio"]],
   crumbTitle: "Privacidad",
   body: prose(`${stamp}
-<div class="note"><strong>Borrador pendiente de revisión legal.</strong> Este texto describe el funcionamiento actual del sitio y debe ser revisado por un abogado antes de considerarse definitivo.</div>
 <h2>Resumen</h2>
 <p>Este sitio es informativo. No tiene cuentas de usuario, formularios de solicitud ni pagos, y no pide datos sensibles.</p>
 <h2>La calculadora</h2>
@@ -274,7 +304,6 @@ const terminos = {
   crumbs: [["/", "Inicio"]],
   crumbTitle: "Términos",
   body: prose(`${stamp}
-<div class="note"><strong>Borrador pendiente de revisión legal.</strong> Este texto debe ser revisado por un abogado antes de considerarse definitivo.</div>
 <h2>1. Naturaleza del sitio</h2>
 <p>Link-Credit ofrece contenido educativo general. No es asesoría financiera, legal, fiscal ni de inversión, y no establece una relación profesional contigo.</p>
 <h2>2. Sin garantías</h2>
