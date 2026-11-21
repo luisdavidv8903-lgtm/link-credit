@@ -28,6 +28,7 @@ function navLinks(current) {
 function layout(p) {
   const url = SITE.origin + p.path;
   const robots = p.noindex ? '<meta name="robots" content="noindex,nofollow">' : "";
+  const gsc = p.home && SITE.gsc ? `<meta name="google-site-verification" content="${SITE.gsc}">` : "";
   const ld = p.jsonld ? `<script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>` : "";
   const crumbs = p.crumbs
     ? `<nav class="crumbs" aria-label="Ruta de navegación">${p.crumbs.map(([h, l]) => `<a href="${h}">${l}</a>`).join(" › ")} › <span>${esc(p.crumbTitle || p.title)}</span></nav>`
@@ -45,6 +46,7 @@ function layout(p) {
 <meta name="description" content="${esc(p.description)}">
 <link rel="canonical" href="${url}">
 ${robots}
+${gsc}
 <meta property="og:site_name" content="Link-Credit">
 <meta property="og:type" content="${p.article ? "article" : "website"}">
 <meta property="og:locale" content="es_US">

@@ -7,6 +7,8 @@ export const SITE = {
   phoneTel: "+17865778236",
   updated: "2026-11-21",
   updatedHuman: "21 de noviembre de 2026",
+  // Token público de Google Search Console (método "Etiqueta HTML"). Solo se imprime en la home.
+  gsc: "z9qVfG6iaSWe_0VfKIE47HI6L_PxZV6yqGDRalQNmDo",
 };
 
 // Fuentes oficiales: todas comprobadas con HTTP 200 (las de consumer.ftc.gov, en navegador) el 2026-11-21.
