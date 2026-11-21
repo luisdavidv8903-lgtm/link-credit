@@ -6,7 +6,7 @@ const D = SITE.updated;
 const H = SITE.updatedHuman;
 const wrap = (inner, cls = "") => `<section${cls ? ` class="${cls}"` : ""}><div class="wrap">${inner}</div></section>`;
 const prose = (inner) => wrap(`<div class="prose">${inner}</div>`);
-const mailto = `<a href="mailto:${SITE.email}">${SITE.email}</a>`;
+const mailto = `<!--email_off--><a href="mailto:${SITE.email}">${SITE.email}</a><!--/email_off-->`;
 const stamp = `<p class="meta">Última actualización: <time datetime="${D}">${H}</time>.</p>`;
 
 /* ───────── Inicio ───────── */
