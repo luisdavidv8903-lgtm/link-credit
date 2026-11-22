@@ -66,7 +66,7 @@ ${wrap(`
     <h2 class="section-title">Lo que aprendí construyendo crédito con una empresa nueva.</h2>
     <p class="section-lead">Este proyecto nace de decisiones reales al organizar el crédito personal y empresarial. Compartimos los pasos útiles y también las limitaciones: algunas solicitudes se aprueban, otras no; los productos cambian y el resultado de cada persona puede ser diferente.</p>
     <p class="minor">No publicamos límites, puntuaciones, estados de cuenta ni datos de terceros sin autorización. Un caso personal no demuestra que otra persona vaya a obtener el mismo resultado.</p>
-    <p><a class="btn btn-outline" href="/experiencia-real/">Leer los principios</a></p>
+    <p><a class="btn btn-outline" href="/experiencia-real/">Leer la experiencia</a></p>
   </div>
   <div class="case-block"><h3>Principios que sí se pueden explicar</h3>
     <div class="case-row"><div class="check" aria-hidden="true">✓</div><div><b>Separar finanzas personales y comerciales</b><p>Cuenta bancaria empresarial, registros y control de gastos.</p></div></div>
@@ -123,25 +123,25 @@ const experiencia = {
   crumbTitle: "Experiencia",
   body: prose(`${stamp}
 <h2>Introducción</h2>
-<p>En 2026, el fundador de Link-Credit constituyó una LLC en Florida y empezó a construir crédito empresarial desde cero. Esta página cuenta ese proceso con la mayor precisión posible: lo que se hizo, lo que salió bien, lo que no salió bien y lo que enseñó. Es una experiencia particular, no una receta.</p>
+<p>En mayo de 2026, el fundador de Link-Credit constituyó una LLC en Florida y empezó a construir crédito empresarial desde cero. Esta página cuenta ese proceso con la mayor precisión posible: lo que se hizo, lo que salió bien, lo que no salió bien y lo que enseñó. Es una experiencia particular, no una receta.</p>
 <div class="note"><strong>Transparencia.</strong> Esta página presenta experiencias particulares del fundador de Link-Credit. No constituye una promesa de aprobación, mejora de puntuación ni acceso garantizado a financiamiento. Las políticas de los prestamistas y las circunstancias de cada solicitante pueden variar.</div>
 <div class="info"><strong>Qué no publicamos.</strong> Nombre personal, dirección, números de cuenta o de identificación, puntuaciones, límites, saldos, deudas, ingresos ni documentos financieros privados. Tampoco usamos testimonios ficticios ni atribuimos resultados de otros negocios a esta experiencia. Donde no podemos comprobar un dato, no lo afirmamos.</div>
 
 <h2 id="cronologia">Cronología empresarial</h2>
 <p>Ponemos mes y año solo cuando contamos con un comprobante de la propia entidad. Cuando no, omitimos la fecha.</p>
 <ol class="timeline">
-<li><span class="when">2026 · Constitución de la LLC</span>Se registró una LLC en Florida ante la <a href="${SRC.flLlc[1]}" rel="noopener" target="_blank">División de Corporaciones</a>. Registrar la empresa crea una entidad legal; no crea historial crediticio.</li>
+<li><span class="when">26 de mayo de 2026 · Constitución de la LLC</span>Se presentaron los artículos de organización ante la <a href="${SRC.flLlc[1]}" rel="noopener" target="_blank">División de Corporaciones de Florida</a>. Registrar la empresa crea una entidad legal; no crea historial crediticio.</li>
 <li><span class="when">Primeros pasos · EIN y banca empresarial</span>Se obtuvo el EIN ante el <a href="${SRC.irsEin[1]}" rel="noopener" target="_blank">IRS</a> y se establecieron relaciones bancarias empresariales para separar las finanzas del negocio de las personales.</li>
-<li><span class="when">Julio de 2026 · Dun &amp; Bradstreet</span>Se inició ante D&amp;B la solicitud de un <a href="${SRC.dnb[1]}" rel="noopener" target="_blank">número D-U-N-S</a>. No afirmamos que la empresa tenga una puntuación comercial específica.</li>
-<li><span class="when">Julio de 2026 · Proveedores comerciales</span>Se pidieron términos de pago a un proveedor. Esa solicitud no fue aprobada: lo contamos <a href="#no-todas">más abajo</a>.</li>
-<li><span class="when">Octubre de 2026 · Primera aprobación</span>Se aprobó una tarjeta American Express Blue Business Plus. Detalle en la <a href="#primera-aprobacion">siguiente sección</a>.</li>
+<li><span class="when">Julio de 2026 · Dun &amp; Bradstreet</span>D&amp;B asignó a la empresa un <a href="${SRC.dnb[1]}" rel="noopener" target="_blank">número D-U-N-S</a>. No lo publicamos. Es un identificador, no una puntuación: la propia D&amp;B avisó de que, al principio, el archivo puede no tener información suficiente para generar puntuaciones. No afirmamos que la empresa tenga una puntuación comercial específica.</li>
+<li><span class="when">27 de julio de 2026 · Proveedores comerciales</span>Un proveedor respondió a una solicitud de términos de pago (Net-30) que no había sido aprobada. Lo contamos <a href="#no-todas">más abajo</a>.</li>
+<li><span class="when">5 de octubre de 2026 · Tarjeta empresarial</span>American Express aprobó una tarjeta Blue Business Plus. Detalle en la <a href="#aprobacion-tarjeta">siguiente sección</a>.</li>
 </ol>
 <p class="minor">No afirmamos que algún proveedor haya reportado la actividad de la empresa a un buró comercial: no tenemos un informe que lo demuestre.</p>
 
-<h2 id="primera-aprobacion">Primera aprobación empresarial</h2>
-<p>En octubre de 2026, con la empresa todavía muy nueva, American Express aprobó la tarjeta Blue Business Plus. Es un hecho real, y también un caso particular. Lo que sí podemos decir con honestidad:</p>
+<h2 id="aprobacion-tarjeta">Aprobación de una tarjeta empresarial</h2>
+<p>El 5 de octubre de 2026, American Express aprobó la tarjeta Blue Business Plus para la empresa. Es un hecho real, y también un caso particular. No afirmamos que sea la primera aprobación empresarial ni la única. Lo que sí podemos decir con honestidad:</p>
 <ul>
-<li><strong>La empresa era relativamente nueva.</strong> Tenía pocos meses de actividad y poco historial propio.</li>
+<li><strong>La empresa era relativamente nueva.</strong> Llevaba poco más de cuatro meses constituida y tenía poco historial propio.</li>
 <li><strong>La solicitud resultó aprobada.</strong> Y no sabemos exactamente por qué: la notificación de aprobación no detalla los factores. Por eso no publicamos teorías.</li>
 <li><strong>Las instituciones pueden evaluar el crédito personal del propietario.</strong> En una empresa joven es común, porque la empresa casi no tiene historial. Cuando alguien solicita crédito, el prestamista puede consultar sus informes; lo explica la <a href="${SRC.cfpbInquiry[1]}" rel="noopener" target="_blank">CFPB</a>.</li>
 <li><strong>Una aprobación no garantiza resultados equivalentes para otros solicitantes.</strong> Cada prestamista decide con sus propios criterios y cambian con el tiempo.</li>
@@ -152,10 +152,16 @@ const experiencia = {
 <h2 id="no-todas">No todas las solicitudes terminan en aprobación, y no todas las aprobaciones convienen.</h2>
 <p>Una experiencia honesta incluye las respuestas que no fueron un sí. También exige no mezclar situaciones distintas: una cosa es que te rechacen, otra recibir una oferta que parece buena, otra descartar algo por decisión propia y otra no llegar a solicitarlo.</p>
 <h3>Solicitudes efectivamente rechazadas</h3>
-<p>Un caso documentado: en julio de 2026, la solicitud en línea de términos de pago (Net-30) a un proveedor de suministros no fue aprobada de forma automática. Se pidió una revisión manual. La respuesta del proveedor fue que la cuenta todavía no calificaba para facturación y explicó qué necesitaba: tener entre tres y cinco proveedores ya establecidos con el negocio y pagar por adelantado los pedidos durante 90 días.</p>
+<p>Es el caso que podemos documentar con comunicación escrita. La solicitud en línea de términos de pago (Net-30) a un proveedor de suministros no fue aprobada de forma automática, y se pidió una revisión manual. El 27 de julio de 2026, el proveedor respondió que la cuenta todavía no calificaba para facturación y explicó qué se necesitaba para volver a evaluarla:</p>
+<ul>
+<li>Contar con entre tres y cinco proveedores ya establecidos con el negocio.</li>
+<li>Pagar por adelantado los pedidos durante 90 días (tres meses consecutivos), con un mínimo de compra de 100 dólares al mes.</li>
+</ul>
+<p>No identificamos al proveedor: son sus condiciones, no una regla general del mercado.</p>
 <p><strong>Aprendizaje:</strong> aquí sí conocemos el motivo porque el propio proveedor lo dijo. Cuando el prestamista o proveedor no lo explica, no lo inventamos: lo pedimos por escrito y lo guardamos.</p>
 <h3>Ofertas precalificadas</h3>
-<p>Una precalificación no es una aprobación. En octubre de 2026 llegó una comunicación de un prestador de financiamiento comercial en la que decía que la empresa estaba precalificada, con documentos por presentar para continuar. No es una solicitud aprobada ni un compromiso de financiamiento; es una invitación a seguir. Antes de avanzar, calcula el costo total.</p>
+<p>Una precalificación no es una aprobación, y recibirla no es lo mismo que presentar una solicitud. En octubre de 2026 llegó una comunicación de un prestador de financiamiento comercial que decía que la empresa estaba precalificada y pedía documentos para continuar. El mensaje no indicaba un producto concreto, ni monto, ni condiciones. Por eso esta página no describe ningún resultado de esa precalificación: no es una aprobación ni una solicitud rechazada, y no la contamos como ninguna de las dos.</p>
+<p>Si recibes algo parecido, antes de avanzar pregunta qué producto es, cuánto cuesta en total y quién responde si el negocio no paga.</p>
 
 <h2 id="descartadas">Decisiones financieras que se descartaron</h2>
 <p>Decir que no también es una decisión financiera. Estas son las preguntas que nos hacemos antes de aceptar o solicitar un producto:</p>
