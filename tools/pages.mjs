@@ -109,30 +109,86 @@ ${wrap(`
 };
 
 /* ───────── Experiencia real ───────── */
+// Hechos publicados: solo los autorizados por el fundador y respaldados por comunicaciones de las propias entidades
+// (ver INFORME_EXPERIENCIA en Desktop\reports). No se publica nombre, EIN, UEI, cuentas, límites, puntajes ni saldos.
+const expSources = ["flLlc", "sbaStructure", "irsEin", "dnb", "sbaLoans", "cfpbInquiry", "cfpbCards"];
 const experiencia = {
   path: "/experiencia-real/",
-  title: "Experiencia: crédito con una empresa nueva",
-  h1: "Lo que aprendí construyendo crédito empresarial con una LLC nueva",
-  lead: "Principios que se pueden explicar, límites claros y nada de promesas.",
-  description: "Principios aprendidos al organizar el crédito personal y empresarial de una LLC nueva: separar finanzas, comprobar quién reporta, evaluar ofertas y entender la garantía personal.",
+  title: "Experiencia: crédito con una LLC nueva",
+  h1: "Experiencia del fundador de Link-Credit: crédito empresarial con una LLC nueva",
+  lead: "Qué pasó, qué no pasó y qué aprendimos al construir crédito empresarial desde cero. Sin promesas.",
+  description: "Cómo fue construir crédito empresarial con una LLC nueva en Florida: pasos, una aprobación, una solicitud no aprobada y cinco aprendizajes con fuentes oficiales.",
   updated: D,
   crumbs: [["/", "Inicio"]],
-  crumbTitle: "Experiencia real",
+  crumbTitle: "Experiencia",
   body: prose(`${stamp}
-<p>Este proyecto nace de decisiones reales al organizar el crédito personal y empresarial de una empresa nueva. Aquí compartimos los principios útiles y también las limitaciones: algunas solicitudes se aprueban, otras no; los productos cambian y el resultado de cada persona puede ser diferente.</p>
-<div class="info"><strong>Qué no publicamos.</strong> Límites, puntuaciones, saldos, estados de cuenta, documentos ni datos de terceros, sin autorización. Un caso personal no demuestra que otra persona vaya a obtener el mismo resultado.</div>
-<h2>Principios que sí se pueden explicar</h2>
-<h3>1. Separar finanzas personales y comerciales</h3>
-<p>Una cuenta bancaria empresarial, registros ordenados y control de gastos hacen visible lo que pasa en el negocio y evitan confusiones. Detalle en la guía de <a href="/guias/perfil-crediticio-llc-nueva/">primeros pasos para una LLC</a>.</p>
-<h3>2. Comprobar quién reporta y dónde</h3>
-<p>Un proveedor con términos de pago («net terms») no siempre genera el historial que esperas: pregunta si reporta a algún buró comercial antes de contar con ello.</p>
-<h3>3. Evaluar ofertas sin obsesionarse con el límite</h3>
-<p>La tasa, el costo total y el capital disponible importan más que el número del límite. Usa la lista de <a href="/guias/evaluar-tarjeta-empresarial/">cómo evaluar una tarjeta empresarial</a>.</p>
-<h3>4. Diferenciar el crédito del negocio de la garantía personal</h3>
-<p>Una empresa joven puede seguir dependiendo del perfil de su propietario. Entiende <a href="/guias/credito-personal-vs-empresarial/">qué responde la empresa y qué respondes tú</a>.</p>
-<h2>Y mientras tanto</h2>
-<p>Seguiremos añadiendo aprendizajes solo cuando podamos sostenerlos con hechos o con fuentes oficiales. Para el panorama completo, empieza por la <a href="/credito-empresarial/">guía de crédito empresarial</a>.</p>
-<div class="note"><strong>Advertencia.</strong> Experiencia personal no es asesoría financiera, legal ni fiscal y no garantiza resultados para nadie. Consulta el <a href="/aviso-educativo/">aviso educativo</a>.</div>`),
+<h2>Introducción</h2>
+<p>En 2026, el fundador de Link-Credit constituyó una LLC en Florida y empezó a construir crédito empresarial desde cero. Esta página cuenta ese proceso con la mayor precisión posible: lo que se hizo, lo que salió bien, lo que no salió bien y lo que enseñó. Es una experiencia particular, no una receta.</p>
+<div class="note"><strong>Transparencia.</strong> Esta página presenta experiencias particulares del fundador de Link-Credit. No constituye una promesa de aprobación, mejora de puntuación ni acceso garantizado a financiamiento. Las políticas de los prestamistas y las circunstancias de cada solicitante pueden variar.</div>
+<div class="info"><strong>Qué no publicamos.</strong> Nombre personal, dirección, números de cuenta o de identificación, puntuaciones, límites, saldos, deudas, ingresos ni documentos financieros privados. Tampoco usamos testimonios ficticios ni atribuimos resultados de otros negocios a esta experiencia. Donde no podemos comprobar un dato, no lo afirmamos.</div>
+
+<h2 id="cronologia">Cronología empresarial</h2>
+<p>Ponemos mes y año solo cuando contamos con un comprobante de la propia entidad. Cuando no, omitimos la fecha.</p>
+<ol class="timeline">
+<li><span class="when">2026 · Constitución de la LLC</span>Se registró una LLC en Florida ante la <a href="${SRC.flLlc[1]}" rel="noopener" target="_blank">División de Corporaciones</a>. Registrar la empresa crea una entidad legal; no crea historial crediticio.</li>
+<li><span class="when">Primeros pasos · EIN y banca empresarial</span>Se obtuvo el EIN ante el <a href="${SRC.irsEin[1]}" rel="noopener" target="_blank">IRS</a> y se establecieron relaciones bancarias empresariales para separar las finanzas del negocio de las personales.</li>
+<li><span class="when">Julio de 2026 · Dun &amp; Bradstreet</span>Se inició ante D&amp;B la solicitud de un <a href="${SRC.dnb[1]}" rel="noopener" target="_blank">número D-U-N-S</a>. No afirmamos que la empresa tenga una puntuación comercial específica.</li>
+<li><span class="when">Julio de 2026 · Proveedores comerciales</span>Se pidieron términos de pago a un proveedor. Esa solicitud no fue aprobada: lo contamos <a href="#no-todas">más abajo</a>.</li>
+<li><span class="when">Octubre de 2026 · Primera aprobación</span>Se aprobó una tarjeta American Express Blue Business Plus. Detalle en la <a href="#primera-aprobacion">siguiente sección</a>.</li>
+</ol>
+<p class="minor">No afirmamos que algún proveedor haya reportado la actividad de la empresa a un buró comercial: no tenemos un informe que lo demuestre.</p>
+
+<h2 id="primera-aprobacion">Primera aprobación empresarial</h2>
+<p>En octubre de 2026, con la empresa todavía muy nueva, American Express aprobó la tarjeta Blue Business Plus. Es un hecho real, y también un caso particular. Lo que sí podemos decir con honestidad:</p>
+<ul>
+<li><strong>La empresa era relativamente nueva.</strong> Tenía pocos meses de actividad y poco historial propio.</li>
+<li><strong>La solicitud resultó aprobada.</strong> Y no sabemos exactamente por qué: la notificación de aprobación no detalla los factores. Por eso no publicamos teorías.</li>
+<li><strong>Las instituciones pueden evaluar el crédito personal del propietario.</strong> En una empresa joven es común, porque la empresa casi no tiene historial. Cuando alguien solicita crédito, el prestamista puede consultar sus informes; lo explica la <a href="${SRC.cfpbInquiry[1]}" rel="noopener" target="_blank">CFPB</a>.</li>
+<li><strong>Una aprobación no garantiza resultados equivalentes para otros solicitantes.</strong> Cada prestamista decide con sus propios criterios y cambian con el tiempo.</li>
+<li><strong>Crédito empresarial no significa necesariamente financiamiento sin garantía personal.</strong> Una empresa nueva puede responder con el patrimonio de su dueño. Más en <a href="/guias/credito-personal-vs-empresarial/">crédito personal vs. empresarial</a>.</li>
+</ul>
+<p>No publicamos límites, puntuaciones ni condiciones individuales. Link-Credit no está afiliado a American Express ni a ninguna otra entidad financiera mencionada.</p>
+
+<h2 id="no-todas">No todas las solicitudes terminan en aprobación, y no todas las aprobaciones convienen.</h2>
+<p>Una experiencia honesta incluye las respuestas que no fueron un sí. También exige no mezclar situaciones distintas: una cosa es que te rechacen, otra recibir una oferta que parece buena, otra descartar algo por decisión propia y otra no llegar a solicitarlo.</p>
+<h3>Solicitudes efectivamente rechazadas</h3>
+<p>Un caso documentado: en julio de 2026, la solicitud en línea de términos de pago (Net-30) a un proveedor de suministros no fue aprobada de forma automática. Se pidió una revisión manual. La respuesta del proveedor fue que la cuenta todavía no calificaba para facturación y explicó qué necesitaba: tener entre tres y cinco proveedores ya establecidos con el negocio y pagar por adelantado los pedidos durante 90 días.</p>
+<p><strong>Aprendizaje:</strong> aquí sí conocemos el motivo porque el propio proveedor lo dijo. Cuando el prestamista o proveedor no lo explica, no lo inventamos: lo pedimos por escrito y lo guardamos.</p>
+<h3>Ofertas precalificadas</h3>
+<p>Una precalificación no es una aprobación. En octubre de 2026 llegó una comunicación de un prestador de financiamiento comercial en la que decía que la empresa estaba precalificada, con documentos por presentar para continuar. No es una solicitud aprobada ni un compromiso de financiamiento; es una invitación a seguir. Antes de avanzar, calcula el costo total.</p>
+
+<h2 id="descartadas">Decisiones financieras que se descartaron</h2>
+<p>Decir que no también es una decisión financiera. Estas son las preguntas que nos hacemos antes de aceptar o solicitar un producto:</p>
+<ul>
+<li>¿Cuánto cuesta en total? Intereses, comisiones, cuota anual y penalidades, no solo el límite.</li>
+<li>¿Quién responde si el negocio no paga? ¿Hay garantía personal?</li>
+<li>¿El pago cabe en el flujo de caja de un mes flojo, no solo de uno bueno?</li>
+<li>¿Lo necesito ahora para algo concreto del negocio?</li>
+<li>¿Cuántas consultas duras generará la solicitud? Se explica en la <a href="${SRC.cfpbInquiry[1]}" rel="noopener" target="_blank">CFPB</a>.</li>
+</ul>
+<h3>Productos descartados por decisión propia</h3>
+<p>Descartar voluntariamente un producto es distinto de que te lo rechacen. Hoy esta página no cita productos concretos que hayamos descartado; los añadiremos solo cuando podamos documentarlos.</p>
+<h3>Solicitudes que nunca se presentaron</h3>
+<p>Informarse sobre un producto, o recibir una oferta, no es solicitarlo. Tampoco contamos como solicitud algo que no se presentó.</p>
+<h3>Cuando una línea de crédito es un riesgo</h3>
+<p>Una línea de crédito puede ser un riesgo si su costo supera el beneficio económico esperado. Un límite alto no es una ganancia: es una deuda posible. Si el dinero no genera más valor que lo que cuesta, o si el pago depende de ventas que todavía no existen, pedirlo puede empeorar la situación del negocio. La guía <a href="/guias/evaluar-tarjeta-empresarial/">cómo evaluar una tarjeta empresarial</a> da una lista de revisión.</p>
+
+<h2 id="aprendizajes">Cinco aprendizajes</h2>
+<h3>1. Registrar una LLC no crea automáticamente historial crediticio</h3>
+<p>El registro estatal crea una entidad legal. El historial crediticio aparece cuando hay obligaciones o pagos que alguien reporta a un buró, y eso es otro proceso. Qué hacer: registra bien la empresa, mantén tus datos iguales en todos lados y pide a cada proveedor que te diga si reporta. Fuentes: <a href="${SRC.flLlc[1]}" rel="noopener" target="_blank">Florida</a> y <a href="${SRC.sbaStructure[1]}" rel="noopener" target="_blank">SBA</a>.</p>
+<h3>2. Tener un EIN no garantiza financiamiento</h3>
+<p>El EIN identifica a tu empresa ante el IRS. Es necesario para muchas cosas, pero no es una calificación ni una promesa de ningún prestamista. Qué hacer: úsalo para ordenar impuestos y cuentas, y no lo trates como un permiso de crédito. Fuente: <a href="${SRC.irsEin[1]}" rel="noopener" target="_blank">IRS</a>.</p>
+<h3>3. Un proveedor comercial no necesariamente reporta a los burós</h3>
+<p>Un proveedor puede darte términos de pago y aun así no reportar. Y algunos exigen antes un historial de compras, como vimos arriba. Qué hacer: pregunta por escrito qué buró recibe los datos y no compres solo para «aparecer» en un informe. El número D-U-N-S solo ayuda a que D&amp;B ordene un archivo de tu empresa; <a href="${SRC.dnb[1]}" rel="noopener" target="_blank">consulta sus condiciones</a>.</p>
+<h3>4. El crédito empresarial puede involucrar garantías personales</h3>
+<p>En una empresa nueva, el prestamista suele mirar también a su dueño. Antes de firmar, lee qué garantiza tu firma, hasta cuánto y si el producto puede aparecer en tu informe personal. Más detalle en la guía de <a href="/guias/perfil-crediticio-llc-nueva/">primeros pasos de una LLC nueva</a>.</p>
+<h3>5. Proteger el flujo de caja importa más que acumular límites</h3>
+<p>Un límite alto no paga facturas. El flujo de caja sí. Qué hacer: calcula el pago mensual en un mal mes, deja margen y no uses el crédito para cubrir gastos recurrentes que el negocio no cubre. Fuentes: <a href="${SRC.sbaLoans[1]}" rel="noopener" target="_blank">SBA</a> y <a href="${SRC.cfpbCards[1]}" rel="noopener" target="_blank">CFPB</a>. Puedes revisar tu uso de crédito con la <a href="/herramientas/utilizacion-crediticia/">calculadora de utilización</a>.</p>
+
+<div class="sources"><h2>Fuentes oficiales</h2><ul>${expSources.map((k) => `<li><a href="${SRC[k][1]}" rel="noopener" target="_blank">${SRC[k][0]}</a></li>`).join("")}</ul><p class="meta">Los enlaces apuntan a sitios externos, en inglés en su mayoría. Comprobamos que abrían el ${H}.</p></div>
+
+<h2>Aviso educativo</h2>
+<p>Esto es una experiencia personal con fines educativos. No es asesoría financiera, legal ni fiscal, y no promete resultados a nadie. Link-Credit no presta dinero ni gestiona solicitudes de crédito. Lee el <a href="/aviso-educativo/">aviso educativo</a> completo.</p>`),
 };
 
 /* ───────── Calculadora ───────── */

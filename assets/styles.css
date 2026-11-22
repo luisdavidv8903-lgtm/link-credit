@@ -232,3 +232,9 @@ table.t th { background: #eef3fa; color: var(--navy); }
 .glist .card h2 a { text-decoration: none; color: var(--navy); }
 .glist .card h2 a:hover { text-decoration: underline; }
 .table-scroll:focus-visible { outline: 3px solid #2f7de1; outline-offset: 2px; }
+
+/* Cronología (página Experiencia) */
+.prose .timeline { list-style: none; padding: 0 0 0 4px; margin: 22px 0; border-left: 3px solid var(--green); }
+.prose .timeline li { position: relative; margin: 0; padding: 0 0 20px 22px; }
+.prose .timeline li::before { content: ""; position: absolute; left: -11px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--green); border: 3px solid #fff; box-shadow: 0 0 0 1px var(--green); }
+.prose .timeline .when { display: block; font-weight: 700; color: var(--navy); margin-bottom: 2px; }

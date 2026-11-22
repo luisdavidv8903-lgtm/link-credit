@@ -30,6 +30,8 @@ export const SRC = {
   fdicMoney: ["FDIC: Money Smart (educación financiera)", "https://www.fdic.gov/consumer-resource-center/money-smart"],
   myficoFactors: ["myFICO: Qué incluye tu puntaje FICO", "https://www.myfico.com/credit-education/whats-in-your-credit-score"],
   myficoScores: ["myFICO: Puntajes de crédito", "https://www.myfico.com/credit-education/credit-scores"],
+  flLlc: ["Florida: División de Corporaciones, registro de una LLC (Articles of Organization)", "https://dos.fl.gov/sunbiz/start-business/efile/fl-llc/"],
+  sbaStructure: ["SBA: Cómo elegir una estructura de negocio", "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure"],
   dnb: ["Dun & Bradstreet: número D-U-N-S", "https://www.dnb.com/en-us/smb/duns.html"],
   flStat: ["Estatutos de Florida, capítulo 817, parte III (servicios de crédito)", "https://www.flsenate.gov/Laws/Statutes/2025/Chapter817/Part_III"],
 };
