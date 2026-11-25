@@ -90,7 +90,7 @@ export const guides = [
     short: "Crédito personal vs. empresarial: diferencias",
     title: "Diferencias entre crédito personal y crédito empresarial",
     lead: "Son historiales distintos, con reglas y accesos distintos. Entender la diferencia evita decisiones basadas en promesas.",
-    description: "Cómo se diferencian el crédito personal y el crédito empresarial: quién se evalúa, qué burós intervienen, qué es una garantía personal y por qué una LLC nueva no tiene crédito propio automáticamente.",
+    description: "Crédito personal vs. empresarial: quién se evalúa, qué burós intervienen, qué es una garantía personal y por qué una LLC nueva no tiene crédito propio.",
     sources: ["cfpbReport", "dnb", "sbaLoans", "fdicMoney"],
     html: `
 <h2>La idea central</h2>
@@ -124,7 +124,7 @@ export const guides = [
     short: "Perfil crediticio de una LLC nueva",
     title: "Primeros pasos para establecer el perfil crediticio de una LLC",
     lead: "Una ruta ordenada y realista. Sin atajos, porque el historial se construye con el tiempo.",
-    description: "Pasos prácticos para una LLC recién creada: EIN, separación de finanzas, número D-U-N-S, proveedores con términos de pago y monitoreo. Con advertencias sobre promesas de crédito instantáneo.",
+    description: "Pasos para una LLC recién creada: EIN, separar finanzas, número D-U-N-S, proveedores con términos de pago y monitoreo. Advierte sobre promesas de crédito.",
     sources: ["irsEin", "sbaLicenses", "dnb", "acr", "cfpbDispute"],
     html: `
 <div class="info"><strong>Importante:</strong> un EIN, un número D-U-N-S o una LLC <em>no garantizan</em> crédito empresarial. Son piezas de identificación y organización; el crédito lo otorgan los prestamistas y proveedores según su propio análisis.</div>
@@ -162,7 +162,7 @@ export const guides = [
     short: "Cómo evaluar una tarjeta empresarial",
     title: "Cómo evaluar una tarjeta empresarial antes de solicitarla",
     lead: "Una lista de preguntas para comparar con calma, más allá de la publicidad y las recompensas.",
-    description: "Qué revisar antes de pedir una tarjeta de crédito empresarial: APR, cuotas, garantía personal, a quién reporta, promociones de 0 % y qué pasa si pagas tarde. Incluye un ejemplo de costo.",
+    description: "Qué revisar antes de pedir una tarjeta empresarial: APR, cuotas, garantía personal, a quién reporta, promociones de 0 % y pagos tardíos. Con ejemplo de costo.",
     sources: ["cfpbCards", "cfpbInquiry", "fdicMoney", "sbaLoans"],
     html: `
 <h2>Primero: ¿necesitas financiamiento?</h2>
@@ -207,7 +207,7 @@ export const guides = [
     short: "Por qué aumentar límites no siempre ayuda",
     title: "Por qué aumentar los límites no siempre mejora tu situación financiera",
     lead: "Un límite mayor baja tu porcentaje de utilización, pero también puede aumentar el riesgo.",
-    description: "Cuándo un aumento de límite ayuda y cuándo no: efecto en la utilización, posibles consultas duras, riesgo de gastar más y por qué no sustituye un buen flujo de caja.",
+    description: "Cuándo ayuda un aumento de límite y cuándo no: efecto en la utilización, consultas duras, riesgo de gastar más y por qué no sustituye un buen flujo de caja.",
     sources: ["myficoFactors", "cfpbInquiry", "cfpbKeep", "fdicMoney"],
     html: `
 <h2>Lo que sí hace un límite mayor</h2>
@@ -243,7 +243,7 @@ export const personal = {
   title: "Crédito personal: conceptos clave",
   h1: "Crédito personal: conceptos clave",
   lead: "Qué mira un informe, cómo se forman los puntajes y qué errores conviene evitar.",
-  description: "Guía educativa de crédito personal en español: historial de pagos, utilización, reportes, consultas duras y suaves, antigüedad, modelos de puntaje y errores frecuentes.",
+  description: "Guía de crédito personal en español: historial de pagos, utilización, reportes, consultas duras y suaves, antigüedad, modelos de puntaje y errores frecuentes.",
   updated: D,
   crumbs: [["/", "Inicio"]],
   jsonld: articleLd("Crédito personal: conceptos clave", "/credito-personal/", "Guía educativa de crédito personal"),
@@ -296,7 +296,7 @@ export const empresarial = {
   title: "Crédito empresarial: guía para negocios nuevos",
   h1: "Crédito empresarial: guía para negocios nuevos",
   lead: "Cómo funciona el crédito de una empresa, qué piden los prestamistas y qué errores evitar. Sin promesas, con fuentes.",
-  description: "Guía educativa de crédito empresarial para una LLC nueva: D-U-N-S, proveedores, reportes comerciales, garantías personales, tarjetas, líneas de crédito, APR y flujo de caja.",
+  description: "Guía de crédito empresarial para una LLC nueva: D-U-N-S, proveedores, reportes comerciales, garantías personales, tarjetas, líneas de crédito y flujo de caja.",
   updated: D,
   crumbs: [["/", "Inicio"]],
   jsonld: articleLd("Crédito empresarial: guía para negocios nuevos", "/credito-empresarial/", "Guía educativa de crédito empresarial"),
